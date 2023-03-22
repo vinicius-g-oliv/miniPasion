@@ -74,6 +74,9 @@
 		6B35D92629CB95EA00C59E34 = {
 			isa = PBXGroup;
 			children = (
+				6B35D95E29CB96CD00C59E34 /* Model */,
+				6B35D95D29CB96C200C59E34 /* ViewModel */,
+				6B35D95C29CB96B900C59E34 /* View */,
 				6B35D93129CB95EA00C59E34 /* Mini4 */,
 				6B35D94229CB95EA00C59E34 /* Mini4Tests */,
 				6B35D94C29CB95EA00C59E34 /* Mini4UITests */,
@@ -125,6 +128,27 @@
 				6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */,
 			);
 			path = Mini4UITests;
+			sourceTree = "<group>";
+		};
+		6B35D95C29CB96B900C59E34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B35D95D29CB96C200C59E34 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B35D95E29CB96CD00C59E34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
