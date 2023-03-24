@@ -14,6 +14,7 @@
 		6B35D94429CB95EA00C59E34 /* Mini4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94329CB95EA00C59E34 /* Mini4Tests.swift */; };
 		6B35D94E29CB95EA00C59E34 /* Mini4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94D29CB95EA00C59E34 /* Mini4UITests.swift */; };
 		6B35D95029CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */; };
+		D4DB4A2429CE41EB00194C3F /* RespostasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4A2329CE41EB00194C3F /* RespostasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6B35D94929CB95EA00C59E34 /* Mini4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mini4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B35D94D29CB95EA00C59E34 /* Mini4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini4UITests.swift; sourceTree = "<group>"; };
 		6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini4UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4DB4A2329CE41EB00194C3F /* RespostasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespostasView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		6B35D95D29CB96C200C59E34 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D4DB4A2329CE41EB00194C3F /* RespostasView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DB4A2429CE41EB00194C3F /* RespostasView.swift in Sources */,
 				6B35D93529CB95EA00C59E34 /* ContentView.swift in Sources */,
 				6B35D93329CB95EA00C59E34 /* Mini4App.swift in Sources */,
 			);
@@ -441,7 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = V9W6LRA69X;
+				DEVELOPMENT_TEAM = MM9XM3Z7DH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,7 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = V9W6LRA69X;
+				DEVELOPMENT_TEAM = MM9XM3Z7DH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

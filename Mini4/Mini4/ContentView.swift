@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Grid {
-            GridRow {
-                Text("Hello")
-                Image(systemName: "globe")
-            }
-            Divider()
-            GridRow {
-                Image(systemName: "hand.wave")
-                Text("World")
-            }
-        }
+//        Grid {
+//            GridRow {
+//                Text("Hello")
+//                Image(systemName: "globe")
+//            }
+//            Divider()
+//            GridRow {
+//                Image(systemName: "hand.wave")
+//                Text("World")
+//            }
+//        }
+        RespostasView()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
