@@ -14,6 +14,7 @@
 		6B35D94429CB95EA00C59E34 /* Mini4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94329CB95EA00C59E34 /* Mini4Tests.swift */; };
 		6B35D94E29CB95EA00C59E34 /* Mini4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94D29CB95EA00C59E34 /* Mini4UITests.swift */; };
 		6B35D95029CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */; };
+		8163271829CE36AF002DECB0 /* ConfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163271729CE36AF002DECB0 /* ConfView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6B35D94929CB95EA00C59E34 /* Mini4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mini4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B35D94D29CB95EA00C59E34 /* Mini4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini4UITests.swift; sourceTree = "<group>"; };
 		6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini4UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8163271729CE36AF002DECB0 /* ConfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +76,6 @@
 		6B35D92629CB95EA00C59E34 = {
 			isa = PBXGroup;
 			children = (
-				6B35D95E29CB96CD00C59E34 /* Model */,
-				6B35D95D29CB96C200C59E34 /* ViewModel */,
-				6B35D95C29CB96B900C59E34 /* View */,
 				6B35D93129CB95EA00C59E34 /* Mini4 */,
 				6B35D94229CB95EA00C59E34 /* Mini4Tests */,
 				6B35D94C29CB95EA00C59E34 /* Mini4UITests */,
@@ -99,6 +98,7 @@
 			children = (
 				6B35D93229CB95EA00C59E34 /* Mini4App.swift */,
 				6B35D93429CB95EA00C59E34 /* ContentView.swift */,
+				8163271729CE36AF002DECB0 /* ConfView.swift */,
 				6B35D93629CB95EA00C59E34 /* Assets.xcassets */,
 				6B35D93829CB95EA00C59E34 /* Preview Content */,
 			);
@@ -128,27 +128,6 @@
 				6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */,
 			);
 			path = Mini4UITests;
-			sourceTree = "<group>";
-		};
-		6B35D95C29CB96B900C59E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6B35D95D29CB96C200C59E34 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		6B35D95E29CB96CD00C59E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8163271829CE36AF002DECB0 /* ConfView.swift in Sources */,
 				6B35D93529CB95EA00C59E34 /* ContentView.swift in Sources */,
 				6B35D93329CB95EA00C59E34 /* Mini4App.swift in Sources */,
 			);
