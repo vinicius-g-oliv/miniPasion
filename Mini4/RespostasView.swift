@@ -32,17 +32,16 @@ struct RespostasView: View {
                             .font(.system(size: 30, weight: .medium, design: .rounded))
                         LazyHGrid(rows: rows, alignment: .center){
                             ForEach(numbers, id: \.self) { number in
-                                Rectangle()
-                                    .frame(width: 90, height: 70)
-                                    .foregroundColor(color)
-                                    .cornerRadius(15)
-                                if let numbers = ["number"] as? String {
-                                    Text("\(numbers)")
-                                        .foregroundColor(.black)
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 90, height: 70)
+                                        .foregroundColor(color)
+                                        .cornerRadius(15)
+                                    
+                                    Text("\(number)")
+                                        .foregroundColor(.white)
                                         .font(.system(size: 30, weight: .medium, design: .rounded))
                                 }
-                                
-                                
                             }
                             .frame(width: 100)
                         }
