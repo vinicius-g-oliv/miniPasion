@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RespostasView: View {
     
-    private var numbers: [Int] = Array(1...15)
+   private var numbers: [Int] = Array(1...15)
+ 
     
     let rows = [
         GridItem(.fixed(70)),
@@ -65,6 +66,7 @@ struct RespostasView: View {
                         }.position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
                     }
                 }
+
             }
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -75,5 +77,6 @@ struct RespostasView: View {
             }
         }
 }
+
 
 
