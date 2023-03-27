@@ -19,33 +19,21 @@ struct ContentView: View {
                 
                 //MARK: Facil
                 NavigationLink(destination: ConfView()) {
-                    Label("Facil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
+                
+                    Label("Fácil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
                 }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
-//                Button(action:{
-//                    print("facil")
-//                    do {
-//                }) {
-//                    HStack {
-//                        Text("facil" ).frame(maxWidth: 300, maxHeight: 30).bold()
-//                    }
-//                }.buttonStyle(.borderedProminent).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)).frame(width: 300)
+//
                 
                 //MARK: Medio
-                    Button {
-                        print("medio")
-                    } label: {
-                        Text("Médio")
-                            .frame(maxWidth: 300, maxHeight: 30).bold()
-                    }
-                    .buttonStyle(.borderedProminent).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.6))
+                NavigationLink(destination: ConfView()) {
+                
+                    Label("Médio", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
+                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.6)) .buttonStyle(.borderedProminent)
                 //MARK: Dificil
-                Button {
-                    print("dificl")
-                } label: {
-                    Text("Dificil")
-                        .frame(maxWidth: 300, maxHeight: 30).bold()
-                }
-                .buttonStyle(.borderedProminent).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.7))
+                NavigationLink(destination: ConfView()) {
+                
+                    Label("Dificil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
+                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.7)) .buttonStyle(.borderedProminent)
         }
         
             
