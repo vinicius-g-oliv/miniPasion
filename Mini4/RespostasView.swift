@@ -48,8 +48,29 @@ struct RespostasView: View {
                         
                     }
                 }
+                HStack {
+                    GeometryReader() { geon in
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                            ForEach(1..<9) { item in
+                                Button {
+                                    print("OI")
+                                } label: {
+                                    Rectangle()
+                                        .frame(width: 80, height: 80)
+                                    
+                                }
+                            }
+                        }.position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
+                    }
+                }
             }
-        } .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            RespostasView()
+        }
     }
 }
 
