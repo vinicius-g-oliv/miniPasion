@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RespostasView: View {
     
-   private var numbers: [Int] = Array(1...15)
- 
+   private var numbers: [Int] = Array(1...8)
+    @State var clickedButtonsIDs: [Int] = [] //array vazio a ser preenchido 
     
     let rows = [
         GridItem(.fixed(70)),
@@ -32,7 +32,7 @@ struct RespostasView: View {
                         Text("Difícil")
                             .font(.system(size: 30, weight: .medium, design: .rounded))
                         LazyHGrid(rows: rows, alignment: .center){
-                            ForEach(numbers, id: \.self) { number in
+                            ForEach(clickedButtonsIDs, id: \.self) { number in
                                 ZStack {
                                     Rectangle()
                                         .frame(width: 90, height: 70)
@@ -49,23 +49,8 @@ struct RespostasView: View {
                         
                     }
                 }
-                HStack {
-                    GeometryReader() { geon in
-                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                            ForEach(1..<9) { item in
-                                ZStack {
-                                    Button {
-                                        print("OI")
-                                    } label: {
-                                        Rectangle()
-                                            .frame(width: 80, height: 80)
-                                        
-                                    }
-                                }
-                            }
-                        }.position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
-                    }
-                }
+                
+                BottomButtons(clickedButtonIDs: $clickedButtonsIDs) //passando como parâmetro o Binding clickedButtonsIDs
 
             }
             .navigationBarTitleDisplayMode(.inline)
