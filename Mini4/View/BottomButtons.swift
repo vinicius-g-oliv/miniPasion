@@ -34,12 +34,6 @@ struct BottomButtons: View {
                     }
                 }.position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
                 
-                HStack {
-                    ForEach(clickedButtonIDs, id: \.self) { clickedButtonID in
-                        Text("\(clickedButtonID)")
-                    }
-                }
-                
             }
         }
     }
