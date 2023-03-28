@@ -55,19 +55,3 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-//GeometryReader() { geo in
-//                Grid {
-//                    GridRow {
-//                        Color.clear
-//                            .gridCellUnsizedAxes([.horizontal, .vertical])
-//
-//                    }
-//                    ForEach(1..<3) { row in
-//                        GridRow {
-//
-//                            RoundedRectangle(cornerRadius: 10).frame(width: 300 ,height:20).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5))
-//
-//                        }
-//                    }
-//                }
-//            }
