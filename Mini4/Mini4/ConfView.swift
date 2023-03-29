@@ -21,7 +21,12 @@ struct ConfView: View {
         GeometryReader() {geo in
             VStack {
                 HStack{
-                    Text("\(cont)")
+//                    ForEach(images.returnArray()){ image in
+//                        Text(image)
+//                        
+//                    }
+                    Text("\(images.randomImages.count)")
+                    
                 }.frame(width: 100,height: 100)
                 HStack {
                     Image(systemName: random).resizable()
@@ -45,8 +50,8 @@ struct ConfView: View {
                 cont += 1
                 
                
-                if cont == 9 {
-                  print("aa")
+                if cont == 3{
+                  //tela barb
                 }
                 callFunc()
             }
