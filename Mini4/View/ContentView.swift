@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        RespostasView()
+     
         NavigationView {
             GeometryReader() { geo in
                 NavigationLink(destination: ConfView()) {
