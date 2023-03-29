@@ -17,23 +17,21 @@ struct BottomButtons: View {
     var body: some View {
         HStack {
             GeometryReader() { geon in
-                LazyVGrid(columns: gridItens, spacing: 10) {
+                LazyVGrid(columns: gridItens, spacing: 15) {
                     ForEach(forms, id: \.id) { item in
                         Button {
                             clickedButtonIDs.append(item.id) // adiciona o ID do botão clicado no array
                             print("\(item)")
+                         //   deleteAllForms()
                             
                         } label: {
-                            Rectangle()
-                                .fill(item.color)
-                                .frame(width: 80, height: 80)
-                            
-                            
-                            
+                            Image(systemName: "\(item.symbol)")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .position(x: 50, y: 2)
                         }
                     }
                 }.position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
-                
             }
         }
     }

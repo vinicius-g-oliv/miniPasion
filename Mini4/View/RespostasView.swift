@@ -49,10 +49,9 @@ struct RespostasView: View {
                         
                     }
                 }
-                
-                BottomButtons(clickedButtonIDs: $clickedButtonsIDs) //passando como parâmetro o Binding clickedButtonsIDs
-
+                RectangleBottom()
             }
+            
             .navigationBarTitleDisplayMode(.inline)
         }
     }
