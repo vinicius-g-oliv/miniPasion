@@ -5,7 +5,7 @@ import SwiftUI
 
 struct ConfView: View {
     @StateObject var images = randomImage()
-    
+    @State var mostrarBotao: Bool = false
     @State var random : String = ""
     @State var cont = 0
     var imagess = ["sun.max.fill", "moon.fill", "star.fill"]
@@ -14,30 +14,28 @@ struct ConfView: View {
     var body: some View {
         GeometryReader() {geo in
             VStack {
-                HStack{
+               
 //                    ForEach(images.returnArray()){ image in
 //                        Text(image)
 //
 //                    }
-                    Text("\(images.randomImages.count)")
-                    
-                }.frame(width: 100,height: 100)
-                HStack {
-                    Image(systemName: random).resizable()
+                Text("\(images.randomImages.count)").bold().frame(width: 60, height: 60, alignment: .top)
+                Image(systemName: random).resizable()
                         .animation(.default, value: cont)
-                        .scaledToFit().frame(width: 100, height: 100).onAppear{
+                        .frame(width: 150, height: 150)
+                        .scaledToFit().onAppear{
                             callFunc()
                         }
-                    
 
-                }
-                HStack {
-                    NavigationLink(destination: RespostasView()) {
-                        Label("Fácil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
-                    }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
-                }
-                .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
-            }.position(CGPoint(x:geo.size.width * 0.5, y:geo.size.height * 0.5 ))
+            } .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.4)) .buttonStyle(.borderedProminent)
+            
+            HStack {
+                NavigationLink(destination: RespostasView()) {
+                    Label("Memorizee!", systemImage: "brain").labelStyle(.titleAndIcon)
+                        .frame(maxWidth: 300, maxHeight: 30).bold()
+                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.8)) .buttonStyle(.borderedProminent)
+            }.disabled(mostrarBotao)
+           
         }
       
     }
@@ -49,7 +47,9 @@ struct ConfView: View {
                 
                 self.random =  images.randon()
                 cont += 1
-                
+                if cont == 3 {
+//                    mostrarBotao = false
+                }
                 callFunc()
             }
         }
@@ -61,5 +61,10 @@ struct ConfView: View {
 
 
 
-
+struct ConfViewe: PreviewProvider {
+    static var previews: some View {
+        ConfView()
+        
+    }
+}
 

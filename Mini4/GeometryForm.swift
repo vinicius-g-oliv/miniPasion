@@ -31,19 +31,20 @@ import SwiftUI
 //    }
 
 struct GeometryForm: Hashable {
-//    let id: Int
+    let id: Int
     let name: String
-     let color: Color
+    let color: Color
+    let image: String
 }
 
 extension GeometryForm {
-    static let forms = [GeometryForm(name: "tringulo", color: .black),
-                        GeometryForm(name: "circulo", color: .black),
-                        GeometryForm(name: "quadrado", color: .blue),
-                      GeometryForm(name: "retangulo", color: .red),
-                      GeometryForm(name: "elipse", color: .red),
-                      GeometryForm(name: "losango", color: .red),
-                      GeometryForm(name: "estrela", color: .red),
-                      GeometryForm(name: "coracao", color: .red)]
+    static let forms = [GeometryForm(id: 1, name: "circulo", color: .black, image: "circuloBranco"),
+                        GeometryForm(id: 2, name: "triangulo", color: .black, image: "trianguloBranco"),
+                        GeometryForm(id: 3, name: "pentagono", color: .black, image: "pentagonoBranco"),
+                        GeometryForm(id: 4, name: "estrela", color: .black, image: "estrelaBranco"),
+                        GeometryForm(id: 5, name: "retangulo", color: .black, image: "retanguloBranco"),
+                        GeometryForm(id: 6, name: "elipse", color: .black, image: "elipseBranco"),
+                        GeometryForm(id: 7, name: "quadrado", color: .black, image: "quadradoBranco"),
+                        GeometryForm(id: 8, name: "hexagono", color: .black, image: "hexagonoBranco")]
 
 }

@@ -27,9 +27,19 @@ struct BottomButtons: View {
                             print("\(clickedButtonIDs)")
                             
                         } label: {
-                            Rectangle()
-                                .fill(form.color)
-                                .frame(width: 80, height: 80)
+                            ZStack {
+                                Rectangle()
+                                    .fill(form.color)
+                                
+                                    .frame(width: 80, height: 80)
+                                
+                                           
+                                Image(form.image).resizable().frame(width: 30, height: 30)
+                            
+                                        }
+//                          Image("trianguloBranco").frame(width: 80, height: 80)
+                            
+                            
                         }
                     } //
                 }
