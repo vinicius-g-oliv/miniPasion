@@ -28,8 +28,15 @@ struct ConfView: View {
                         .scaledToFit().frame(width: 100, height: 100).onAppear{
                             callFunc()
                         }
+                    
 
                 }
+                HStack {
+                    NavigationLink(destination: RespostasView()) {
+                        Label("Fácil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
+                    }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
+                }
+                .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
             }.position(CGPoint(x:geo.size.width * 0.5, y:geo.size.height * 0.5 ))
         }
       
@@ -43,10 +50,6 @@ struct ConfView: View {
                 self.random =  images.randon()
                 cont += 1
                 
-               
-                if cont == 3{
-                  //tela barb
-                }
                 callFunc()
             }
         }
@@ -60,8 +63,3 @@ struct ConfView: View {
 
 
 
-struct Conf_Preview: PreviewProvider {
-    static var previews: some View {
-        ConfView()
-    }
-}

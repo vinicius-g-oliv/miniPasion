@@ -19,7 +19,6 @@ struct ContentView: View {
                 
                 //MARK: Facil
                 NavigationLink(destination: ConfView()) {
-                
                     Label("Fácil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
                 }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
 //
@@ -44,5 +43,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
