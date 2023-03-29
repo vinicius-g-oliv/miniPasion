@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RespostasView: View {
     
-   private var numbers: [Int] = Array(1...8)
-    @State var clickedButtonsIDs: [Int] = [] //array vazio a ser preenchido 
+//   private var numbers: [Int] = Array(1...8)
+    @State var clickedButtonsIDs: [String] = [] //array vazio a ser preenchido
     
     let rows = [
         GridItem(.fixed(70)),
@@ -31,21 +31,21 @@ struct RespostasView: View {
                     VStack {
                         Text("Difícil")
                             .font(.system(size: 30, weight: .medium, design: .rounded))
-                        LazyHGrid(rows: rows, alignment: .center){
+//                        LazyHGrid(rows: rows, alignment: .center){
                             ForEach(clickedButtonsIDs, id: \.self) { number in
                                 ZStack {
                                     Rectangle()
                                         .frame(width: 90, height: 70)
                                         .foregroundColor(color)
                                         .cornerRadius(15)
-                                    
-                                    Text("\(number)")
+
+                                    Text("\(number)") //\(number)
                                         .foregroundColor(.white)
                                         .font(.system(size: 30, weight: .medium, design: .rounded))
                                 }
                             }
                             .frame(width: 100)
-                        }
+//                        }
                         
                     }
                 }

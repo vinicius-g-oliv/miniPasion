@@ -7,6 +7,7 @@
 import SwiftUI
 
 
+<<<<<<< Updated upstream
 struct GeometryForm: Identifiable {
     var id: Int
     var color: Color
@@ -28,4 +29,21 @@ extension GeometryForm {
 //    static func removeAllForms() {
 //        forms.removeAll()
 //    }
+=======
+struct GeometryForm: Hashable {
+//    let id: Int
+    let name: String
+     let color: Color
+}
+
+extension GeometryForm {
+    static let forms = [GeometryForm(name: "tringulo", color: .black),
+                        GeometryForm(name: "circulo", color: .black),
+                        GeometryForm(name: "quadrado", color: .blue),
+                      GeometryForm(name: "retangulo", color: .red),
+                      GeometryForm(name: "elipse", color: .red),
+                      GeometryForm(name: "losango", color: .red),
+                      GeometryForm(name: "estrela", color: .red),
+                      GeometryForm(name: "coracao", color: .red)]
+>>>>>>> Stashed changes
 }
