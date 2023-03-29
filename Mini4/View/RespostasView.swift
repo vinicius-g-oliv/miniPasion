@@ -49,7 +49,7 @@ struct RespostasView: View {
                         
                     }
                 }
-                RectangleBottom()
+               BottomButtons(clickedButtonIDs: $clickedButtonsIDs)
             }
             
             .navigationBarTitleDisplayMode(.inline)
