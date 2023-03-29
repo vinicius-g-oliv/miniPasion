@@ -37,8 +37,8 @@ struct GeometryForm: Hashable {
 }
 
 extension GeometryForm {
-    static let forms = [GeometryForm(name: "tringulo", color: .black),
-                        GeometryForm(name: "circulo", color: .black),
+    static let forms = [GeometryForm(name: "square.fill", color: .black),
+                        GeometryForm(name: "hexagon.fill", color: .black),
                         GeometryForm(name: "quadrado", color: .blue),
                       GeometryForm(name: "retangulo", color: .red),
                       GeometryForm(name: "elipse", color: .red),

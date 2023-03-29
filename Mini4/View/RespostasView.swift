@@ -12,6 +12,10 @@ struct RespostasView: View {
 //   private var numbers: [Int] = Array(1...8)
     @State var clickedButtonsIDs: [String] = [] //array vazio a ser preenchido
     
+//    var clickedButtonsFinal: [String] = []
+    
+//    var forms: GeometryForm
+    
     let rows = [
         GridItem(.fixed(70)),
         GridItem(.fixed(70)),
@@ -20,6 +24,11 @@ struct RespostasView: View {
         GridItem(.fixed(70))
     ]
     private let color: Color = .gray
+    
+//    func alimentandoClickedBottons() {
+//        clickedButtonsIDs.append(contentsOf: clickedButtonsFinal)
+//    }
+    
     
     var body: some View {
         NavigationView {
@@ -31,18 +40,38 @@ struct RespostasView: View {
                     VStack {
                         Text("Difícil")
                             .font(.system(size: 30, weight: .medium, design: .rounded))
-//                        LazyHGrid(rows: rows, alignment: .center){
-                            ForEach(clickedButtonsIDs, id: \.self) { number in
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 90, height: 70)
-                                        .foregroundColor(color)
-                                        .cornerRadius(15)
+//                        H
+                        ForEach(Array(clickedButtonsIDs.enumerated()), id: \.offset) { index, number in
+                                HStack {
+                                    VStack {
+                                        ZStack {
+                                            if index < 3 {
+                                                Rectangle()
+                                                    .frame(width: 90, height: 70)
+                                                    .foregroundColor(color)
+                                                    .cornerRadius(15)
 
-                                    Text("\(number)") //\(number)
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 30, weight: .medium, design: .rounded))
+                                                Text("\(number)")
+            //                                    Image("\(forms.name)")
+                                                    .foregroundColor(.white)
+                                                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                                            }
+                                            
+                                            
+                                        }
+                                    }
+                                    
+                    
+                                    
+                                    VStack {
+                                        
+                                    }
+                                    
+                                    VStack {
+                                        
+                                    }
                                 }
+                                
                             }
                             .frame(width: 100)
 //                        }
@@ -55,11 +84,11 @@ struct RespostasView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
-        struct ContentView_Previews: PreviewProvider {
-            static var previews: some View {
-                RespostasView()
-            }
-        }
+//        struct ContentView_Previews: PreviewProvider {
+//            static var previews: some View {
+//                RespostasView(forms: GeometryForm)
+//            }
+//        }
 }
 
 

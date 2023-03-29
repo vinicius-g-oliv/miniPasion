@@ -27,6 +27,7 @@ struct BottomButtons: View {
                             print("\(clickedButtonIDs)")
                             
                         } label: {
+                            Image(systemName: "\(form.name)")
                             Rectangle()
                                 .fill(form.color)
                                 .frame(width: 80, height: 80)
