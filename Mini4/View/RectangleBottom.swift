@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RectangleBottom: View {
     
-    @State var clickedButtonsIDs: [Int] = [] //array vazio a ser preenchido
+    @State var clickedButtonsIDs: [String] = [] //array vazio a ser preenchido
 
     var body: some View {
         ZStack(alignment: .bottom) {
