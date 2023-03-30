@@ -21,12 +21,12 @@ struct BottomButtons: View {
                 LazyVGrid(columns: gridItens, spacing: 10) {
                     ForEach(forms, id: \.self) { form in
                         Button {
-
-                                if clickedButtonIDs.count < 18 {
-                                    clickedButtonIDs.append(form.name)
-                                    print("\(clickedButtonIDs)")
-                                }
-
+                            
+                            if clickedButtonIDs.count < 9 {
+                                clickedButtonIDs.append(form.name)
+                                print("\(clickedButtonIDs)")
+                            }
+                            
                         } label: {
                             Image(systemName: "\(form.name)")
                             Rectangle()
@@ -36,10 +36,44 @@ struct BottomButtons: View {
                     }
                 }
                 .position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
+                
+                Button(action: {
+                    clickedButtonIDs.removeAll()
+                    print("\(clickedButtonIDs)")
+                    print("Bolinha 1")
+                }, label: {
+                    Circle()
+                        .frame(width: 50, height: 50)
+                    
+                })
+                .position(x: 80,y: 700)
+                
+                Button(action: {
+                    
+                    saveArray()
+                    
+                    print("Bolinha 2")
+                }, label: {
+                    Circle()
+                        .frame(width: 50, height: 50)
+                })
+                .position(x: 320,y: 700)
             }
         }
     }
-}
+
+        
+        func saveArray() {
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(clickedButtonIDs, forKey: "clickedButtonIDs")
+                
+                let saveArrayForms = userDefaults.array(forKey: "clickedButtonIDs") as? [String]
+                
+                print("\(String(describing: saveArrayForms))")
+                
+            }
+    }
+
 
 //struct BottomButtons_Previews: PreviewProvider {
 //    static var previews: some View {
