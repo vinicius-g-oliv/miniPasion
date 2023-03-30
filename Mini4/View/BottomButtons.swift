@@ -15,7 +15,7 @@ struct BottomButtons: View {
     
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
-
+    
     
     var body: some View {
         HStack {
@@ -33,15 +33,14 @@ struct BottomButtons: View {
                                 
                                     .frame(width: 80, height: 80)
                                 
-                                           
+                                
                                 Image(form.image).resizable().frame(width: 30, height: 30)
-                            
-                                        }
-//                          Image("trianguloBranco").frame(width: 80, height: 80)
+                                
+                            }
                             
                             
                         }
-                    } //
+                    }
                 }
                 .position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
                 
