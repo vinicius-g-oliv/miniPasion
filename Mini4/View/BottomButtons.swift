@@ -21,22 +21,12 @@ struct BottomButtons: View {
                 LazyVGrid(columns: gridItens, spacing: 10) {
                     ForEach(forms, id: \.self) { form in
                         Button {
-//                            if clickedButtonIDs.count < 3 {
-//                                clickedButtonIDs.append(form.name)
-//                                if clickedButtonIDs.count == 3 {
-//                                    print("\(clickedButtonIDs)")
-//                                }
-//                            } else if clickedButtonIDs.count == 6{
-//                                if clickedButtonIDs.count < 6 {
-//                                    clickedButtonIDs.append(form.name)
-//                                    print("\(clickedButtonIDs)")
-//                                }
-//                            } else if clickedButtonIDs.count == 18 {
+
                                 if clickedButtonIDs.count < 18 {
                                     clickedButtonIDs.append(form.name)
                                     print("\(clickedButtonIDs)")
                                 }
-//                            }
+
                         } label: {
                             Image(systemName: "\(form.name)")
                             Rectangle()
