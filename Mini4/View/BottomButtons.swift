@@ -9,13 +9,11 @@ import SwiftUI
 
 struct BottomButtons: View {
     
-    @Binding var clickedButtonIDs: [String] // altera o array vazio e atualiza o @State
+    @Binding var clickedButtonIDs: [String]
     //@State var num = 1
     var forms = GeometryForm.forms
     
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
-
     
     var body: some View {
         HStack {
@@ -23,25 +21,34 @@ struct BottomButtons: View {
                 LazyVGrid(columns: gridItens, spacing: 10) {
                     ForEach(forms, id: \.self) { form in
                         Button {
-                            clickedButtonIDs.append(form.name) // adiciona o ID do botão clicado no array
-                            print("\(clickedButtonIDs)")
-                            
+//                            if clickedButtonIDs.count < 3 {
+//                                clickedButtonIDs.append(form.name)
+//                                if clickedButtonIDs.count == 3 {
+//                                    print("\(clickedButtonIDs)")
+//                                }
+//                            } else if clickedButtonIDs.count == 6{
+//                                if clickedButtonIDs.count < 6 {
+//                                    clickedButtonIDs.append(form.name)
+//                                    print("\(clickedButtonIDs)")
+//                                }
+//                            } else if clickedButtonIDs.count == 18 {
+                                if clickedButtonIDs.count < 18 {
+                                    clickedButtonIDs.append(form.name)
+                                    print("\(clickedButtonIDs)")
+                                }
+//                            }
                         } label: {
                             Image(systemName: "\(form.name)")
                             Rectangle()
                                 .fill(form.color)
                                 .frame(width: 80, height: 80)
                         }
-                    } //
+                    }
                 }
                 .position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
-                
             }
         }
-        
     }
-    
-    
 }
 
 //struct BottomButtons_Previews: PreviewProvider {
