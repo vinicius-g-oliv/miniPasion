@@ -37,7 +37,9 @@ struct RespostasView: View {
                                                 .foregroundColor(.gray)
                                                 .cornerRadius(15)
                                             if ( index*3 < clickedButtonsIDs.count){
-                                                Text("\(clickedButtonsIDs[index*3])")
+//                                                Image()
+                                                Image("\(clickedButtonsIDs[index*3])").resizable()
+                                                    .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }
@@ -52,7 +54,8 @@ struct RespostasView: View {
                                                 .foregroundColor(.gray)
                                                 .cornerRadius(15)
                                             if ( index*3+1 < clickedButtonsIDs.count){
-                                                Text("\(clickedButtonsIDs[index*3+1])")
+                                                Image("\(clickedButtonsIDs[index*3+1])").resizable()
+                                                    .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }
@@ -68,7 +71,8 @@ struct RespostasView: View {
                                                 .foregroundColor(.gray)
                                                 .cornerRadius(15)
                                             if ( index*3+2 < clickedButtonsIDs.count){
-                                                Text("\(clickedButtonsIDs[index*3+2])")
+                                                Image("\(clickedButtonsIDs[index*3+2])").resizable()
+                                                    .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }

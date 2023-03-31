@@ -17,37 +17,38 @@ struct BottomButtons: View {
     
 
 //>>>>>>> TransicaoTelas
-//    var body: some View {
-//        HStack {
-//            GeometryReader() { geon in
-//                LazyVGrid(columns: gridItens, spacing: 10) {
-//                    ForEach(forms, id: \.self) { form in
-//                        Button {
-//                            
-//                            if clickedButtonIDs.count < 9 {
-//                                clickedButtonIDs.append(form.name)
-//                                print("\(clickedButtonIDs)")
-//                            }
-//                            
-//                        } label: {
-//<<<<<<< HEAD
+    var body: some View {
+        HStack {
+            GeometryReader() { geon in
+                LazyVGrid(columns: gridItens, spacing: 10) {
+                    ForEach(forms, id: \.self) { form in
+                        Button {
+                            
+                            if clickedButtonIDs.count < 9 {
+                                clickedButtonIDs.append(form.image)
+                                print("\(clickedButtonIDs)")
+                            }
+                            
+                        }
+                    label: {
+////<<<<<<< HEAD
 //                            Image(systemName: "\(form.name)")
 //                            Rectangle()
 //                                .fill(form.color)
 //                                .frame(width: 80, height: 80)
 //=======
-//                            ZStack {
-//                                Rectangle()
-//                                    .fill(form.color)
-//                                
-//                                    .frame(width: 80, height: 80)
-//                                
-//                                
-//                                Image(form.image).resizable().frame(width: 30, height: 30)
-//                                
-//                            }
-//                            
-//                            
+                            ZStack {
+                                Rectangle()
+                                    .fill(form.color)
+                                
+                                    .frame(width: 80, height: 80)
+                                
+                                
+                                Image(form.image).resizable().frame(width: 30, height: 30)
+                                
+                            }
+                            
+                            
 //>>>>>>> TransicaoTelas
                         }
                     }
