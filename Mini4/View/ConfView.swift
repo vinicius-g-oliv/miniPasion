@@ -5,51 +5,70 @@ import SwiftUI
 
 struct ConfView: View {
     @StateObject var images = randomImage()
-    
+    @State var mostrarBotao: Bool = true
     @State var random : String = ""
     @State var cont = 0
-    var imagess = ["sun.max.fill", "moon.fill", "star.fill"]
     
     
     var body: some View {
-        GeometryReader() {geo in
-            VStack {
-                HStack{
-//                    ForEach(images.returnArray()){ image in
-//                        Text(image)
-//
-//                    }
-                    Text("\(images.randomImages.count)")
-                    
-                }.frame(width: 100,height: 100)
-                HStack {
-                    Image(systemName: random).resizable()
+        ZStack {
+            Color("background").ignoresSafeArea()
+            
+            GeometryReader() {geo in
+                VStack {
+
+                    Text("\(cont)").bold().foregroundColor(.white).frame(width: 60, height: 60, alignment: .top)
+                    Image(images.randon()).resizable()
                         .animation(.default, value: cont)
-                        .scaledToFit().frame(width: 100, height: 100).onAppear{
+                        .frame(width: 150, height: 150)
+                        .scaledToFit().onAppear{
                             callFunc()
                         }
                     
-
-                }
+                } .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.4)) .buttonStyle(.borderedProminent)
+                
                 HStack {
                     NavigationLink(destination: RespostasView()) {
-                        Label("Fácil", systemImage: "ellipsis.circle").labelStyle(.titleOnly).frame(maxWidth: 300, maxHeight: 30).bold()
-                    }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
-                }
-                .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
-            }.position(CGPoint(x:geo.size.width * 0.5, y:geo.size.height * 0.5 ))
+                        ZStack {
+                            if cont == 9 {
+                                Image("ja-ativo").resizable().frame(minWidth: 200, maxWidth: 100, minHeight: 60,maxHeight: 100)
+                                //MARK: Setar size
+                            }else {
+                                Image("ja-inativo").resizable().frame(minWidth: 200, maxWidth: 100, minHeight: 60,maxHeight: 100)
+                            }
+                           
+                            HStack {
+                                
+                               
+                                if cont == 9 {
+                                    Image(systemName: "brain").foregroundColor(.white)
+                                    Text("Memo!").foregroundColor(.white)
+                                }else {
+                                    Image(systemName: "brain")
+                                    Text("Memorizee!")
+                                }
+                            }
+                           
+                        }.frame(maxWidth: 300, maxHeight: 30).bold()
+                           
+                    }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.8))
+                }.disabled(mostrarBotao)
+                
+            }
+            
         }
-      
     }
     func callFunc() {
         
-        if cont < 3  {
+        if cont < 9  {
            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 
                 self.random =  images.randon()
                 cont += 1
-                
+                if cont == 9 {
+                    mostrarBotao = false
+                }
                 callFunc()
             }
         }
@@ -61,5 +80,10 @@ struct ConfView: View {
 
 
 
-
+struct ConfViewe: PreviewProvider {
+    static var previews: some View {
+        ConfView()
+        
+    }
+}
 
