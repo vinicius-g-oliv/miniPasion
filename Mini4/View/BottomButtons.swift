@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct BottomButtons: View {
-    
+    @State var arraycerto = randomImage()
     @Binding var clickedButtonIDs: [String]
     //@State var num = 1
     var forms = GeometryForm.forms
+    
     
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
@@ -51,6 +52,10 @@ struct BottomButtons: View {
                             }
                             }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.5)
                         }
+                        
+                        
+                        //>>>>>>> TransicaoTelas
+                    }
                     }
                     HStack {
                         Button(action: {
@@ -93,8 +98,3 @@ struct BottomButtons: View {
 }
 
 
-//struct BottomButtons_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BottomButtons(clickedButtonIDs: <#Binding<[Int]>#>)
-//    }
-//}

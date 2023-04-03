@@ -82,13 +82,13 @@ struct ConfView: View {
     }
     func callFunc() {
         
-        if cont < 9  {
+        if cont < 3  {
            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 
                 self.random =  images.randon()
                 cont += 1
-                if cont == 9 {
+                if cont == 3 {
                     mostrarBotao = false
                 }
                 callFunc()
