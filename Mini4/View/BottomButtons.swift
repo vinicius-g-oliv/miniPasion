@@ -15,82 +15,82 @@ struct BottomButtons: View {
     
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
-
-//>>>>>>> TransicaoTelas
+    
+    //>>>>>>> TransicaoTelas
     var body: some View {
-        HStack {
-            GeometryReader() { geon in
-                LazyVGrid(columns: gridItens, spacing: 10) {
-                    ForEach(forms, id: \.self) { form in
-                        Button {
-                            
-                            if clickedButtonIDs.count < 9 {
-                                clickedButtonIDs.append(form.image)
-                                print("\(clickedButtonIDs)")
+        GeometryReader() { geon in
+            ZStack {
+                Image("background").resizable()
+                VStack {
+                    
+                    LazyVGrid(columns: gridItens, spacing: 10) {
+                        ForEach(forms, id: \.self) { form in
+                            HStack {
+                                Button {
+                                    
+                                    if clickedButtonIDs.count < 9 {
+                                        clickedButtonIDs.append(form.image)
+                                        print("\(clickedButtonIDs)")
+                                    }
+                                    
+                                }
+                            label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color("roundedresposta"))
+                                    
+                                        .frame(width: 80, height: 80)
+                                    
+                                    
+                                    Image(form.image).resizable().scaledToFit().frame(width: 40,height: 40)
+                                    
+                                }
+                                
+                                
+                                
                             }
-                            
-                        }
-                    label: {
-////<<<<<<< HEAD
-//                            Image(systemName: "\(form.name)")
-//                            Rectangle()
-//                                .fill(form.color)
-//                                .frame(width: 80, height: 80)
-//=======
-                            ZStack {
-                                Rectangle()
-                                    .fill(form.color)
-                                
-                                    .frame(width: 80, height: 80)
-                                
-                                
-                                Image(form.image).resizable().frame(width: 30, height: 30)
-                                
-                            }
-                            
-                            
-//>>>>>>> TransicaoTelas
+                            }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.5)
                         }
                     }
-                }
-                .position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
-                
-                Button(action: {
-                    clickedButtonIDs.removeAll()
-                    print("\(clickedButtonIDs)")
-                    print("Bolinha 1")
-                }, label: {
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    
-                })
-                .position(x: 80,y: 700)
-                
-                Button(action: {
-                    
-                    saveArray()
-                    
-                    print("Bolinha 2")
-                }, label: {
-                    Circle()
-                        .frame(width: 50, height: 50)
-                })
-                .position(x: 320,y: 700)
+                    HStack {
+                        Button(action: {
+                            clickedButtonIDs.removeAll()
+                            print("\(clickedButtonIDs)")
+                            print("Bolinha 1")
+                        }, label: {
+                            Image("desfazer").resizable()
+                                .frame(width: 50, height: 50)
+                            
+                        }).position(x: geon.size.width * 0.1, y: geon.size.height * 0.5)
+                        
+                        
+                        Button(action: {
+                            
+                            saveArray()
+                            
+                            print("Bolinha 2")
+                        }, label: {
+
+                            Image("ok").resizable().frame(width: 50, height: 50)
+                        }).position(x: geon.size.width * 0.4, y: geon.size.height * 0.5)
+                        
+                    }
+                }.position(x: geon.size.width * 0.5, y: geon.size.height * 0.7)
             }
         }
     }
-
+    
+    
+    func saveArray() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(clickedButtonIDs, forKey: "clickedButtonIDs")
         
-        func saveArray() {
-                let userDefaults = UserDefaults.standard
-                userDefaults.set(clickedButtonIDs, forKey: "clickedButtonIDs")
-                
-                let saveArrayForms = userDefaults.array(forKey: "clickedButtonIDs") as? [String]
-                
-                print("\(String(describing: saveArrayForms))")
-                
-            }
+        let saveArrayForms = userDefaults.array(forKey: "clickedButtonIDs") as? [String]
+        
+        print("\(String(describing: saveArrayForms))")
+        
     }
+}
 
 
 //struct BottomButtons_Previews: PreviewProvider {

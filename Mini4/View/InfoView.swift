@@ -42,64 +42,7 @@ struct InfoView: View {
                         
                         //MARK: Informacoes title
                        
-                        //MARK: COMO JOGAR
-                        Button(action: {
-                            // Dismiss the PopUp
-                            withAnimation(.linear(duration: 0.3)) {
-//                                show = false
-                            }
-                        }, label: {
-                            
-                            Image("questions").resizable().frame(width:30 ,height: 30).position(CGPoint(x: 50, y: 100))
-                            Text("Como Jogar").frame(width:120 ,height: 25).position(CGPoint(x: -20, y: 100))
-                            
-                            
-                                .foregroundColor(Color.white)
-                            
-                                .font(Font.system(size: 20, weight: .semibold))
-                            
-                            
-                        })
-                        
-                        //MARK: FORMAS
-                        Button(action: {
-                            // Dismiss the PopUp
-                            withAnimation(.linear(duration: 0.3)) {
-//                                show = false
-                            }
-                        }, label: {
-                            
-                            Image("formasInfo").resizable().frame(width:30 ,height: 30).position(CGPoint(x: 50, y: 150))
-                            Text("Formas").frame(width:90 ,height: 25).position(CGPoint(x: -40, y: 150))
-                            
-                            
-                                .foregroundColor(Color.white)
-                            
-                                .font(Font.system(size: 20, weight: .semibold))
-                            
-                            
-                        })
-                        
-                        
-                        //                        //MARK: SObre
-                        //
-                        Button(action: {
-                            // Dismiss the PopUp
-                            withAnimation(.linear(duration: 0.3)) {
-//                                show = false
-                            }
-                        }, label: {
-                            
-                            Image("info.circle").resizable().frame(width:30 ,height: 30).position(CGPoint(x: 50, y: 200))
-                            Text("Sobre").frame(width:90 ,height: 25).position(CGPoint(x: -50, y: 200))
-                            
-                            
-                                .foregroundColor(Color.white)
-                            
-                                .font(Font.system(size: 20, weight: .semibold))
-                            
-                            
-                        })
+                   
                         
                         
                     }.frame(width: 300, height: 300).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5))

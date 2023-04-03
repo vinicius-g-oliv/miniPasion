@@ -14,7 +14,7 @@ struct RectangleBottom: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             Rectangle()
-                .fill(.gray)
+                .fill(.white)
                 .ignoresSafeArea()
                 .frame(width: 400, height: 275)
             BottomButtons(clickedButtonIDs: $clickedButtonsIDs) //passando como parâmetro o Binding clickedButtonsID

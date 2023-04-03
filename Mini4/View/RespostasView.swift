@@ -10,22 +10,22 @@ struct RespostasView: View {
     
     @State var clickedButtonsIDs: [String] = []
     
-//    @State private var firstStep = false
-//    @State private var secondStep = false
-//    @State private var lastStep = true
+    //    @State private var firstStep = false
+    //    @State private var secondStep = false
+    //    @State private var lastStep = true
     private let color: Color = .gray
     
     
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color(red: 0.85, green: 0.817, blue: 1)
-                    .ignoresSafeArea()
-    
+        GeometryReader() { geo in
+           
+            NavigationView {
+                ZStack {
+                    
                     VStack {
-                        Text("Fácil")
-                            .font(.system(size: 30, weight: .medium, design: .rounded))
+    //                        Text("Fácil")
+    //                            .font(.system(size: 30, weight: .medium, design: .rounded))
                         
                         ZStack {
                             Grid {
@@ -34,11 +34,13 @@ struct RespostasView: View {
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
-                                                .foregroundColor(.gray)
-                                                .cornerRadius(15)
+                                                
+                                                .foregroundColor(Color("roundedretangle"))
+                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*3 < clickedButtonsIDs.count){
-//                                                Image()
+                                                //                                                Image()
                                                 Image("\(clickedButtonsIDs[index*3])").resizable()
+                                                    .scaledToFit()
                                                     .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
@@ -51,16 +53,17 @@ struct RespostasView: View {
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
-                                                .foregroundColor(.gray)
-                                                .cornerRadius(15)
+                                                .foregroundColor(Color("roundedretangle"))
+                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*3+1 < clickedButtonsIDs.count){
                                                 Image("\(clickedButtonsIDs[index*3+1])").resizable()
+                                                    .scaledToFit()
                                                     .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }
                                         }
-
+                                        
                                     }
                                 }
                                 GridRow {
@@ -68,26 +71,28 @@ struct RespostasView: View {
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
-                                                .foregroundColor(.gray)
-                                                .cornerRadius(15)
+                                                .foregroundColor(Color("roundedretangle"))
+                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*3+2 < clickedButtonsIDs.count){
                                                 Image("\(clickedButtonsIDs[index*3+2])").resizable()
+                                                    .scaledToFit()
                                                     .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }
                                         }
-
+                                        
                                     }                                }
                             }
                         }
                         
-                    }.frame(width: 100)
+                    }.frame(width: 100).position(x:geo.size.width * 0.5 ,y: geo.size.height * 0.3)
                     BottomButtons(clickedButtonIDs: $clickedButtonsIDs)
+                    
+                }.background(Color("background"))
                 
-            }
-            
-        } .navigationBarTitleDisplayMode(.inline)
+            } .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

@@ -15,6 +15,7 @@ struct Random: Hashable {
     var image: String
     var name: String
 }
+
 extension Random {
     static let forms = [Random(image: "circulo amarelo", name: "circulo"),
                         Random(image: "circulo azul", name: "circulo"),
