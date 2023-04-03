@@ -30,7 +30,7 @@ struct ConfView: View {
                 HStack {
                     NavigationLink(destination: RespostasView()) {
                         ZStack {
-                            if cont == 9 {
+                            if cont == 3 {
                                 Image("ja-ativo").resizable().frame(minWidth: 200, maxWidth: 100, minHeight: 60,maxHeight: 100)
                                 //MARK: Setar size
                             }else {
@@ -40,7 +40,7 @@ struct ConfView: View {
                             HStack {
                                 
                                
-                                if cont == 9 {
+                                if cont == 3 {
                                     Image(systemName: "brain").foregroundColor(.white)
                                     Text("Memo!").foregroundColor(.white)
                                 }else {
@@ -60,13 +60,13 @@ struct ConfView: View {
     }
     func callFunc() {
         
-        if cont < 9  {
+        if cont < 3  {
            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 
                 self.random =  images.randon()
                 cont += 1
-                if cont == 9 {
+                if cont == 3 {
                     mostrarBotao = false
                 }
                 callFunc()

@@ -24,6 +24,7 @@
 		8177ABAE29D61B530071059D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAD29D61B530071059D /* InfoView.swift */; };
 		8177ABB029D8BAA80071059D /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAF29D8BAA80071059D /* Info.swift */; };
 		D4DB4A2429CE41EB00194C3F /* RespostasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4A2329CE41EB00194C3F /* RespostasView.swift */; };
+		D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4247D29DB4CED00840B6C /* DefeatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		8177ABAD29D61B530071059D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8177ABAF29D8BAA80071059D /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		D4DB4A2329CE41EB00194C3F /* RespostasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RespostasView.swift; path = View/RespostasView.swift; sourceTree = SOURCE_ROOT; };
+		D4F4247D29DB4CED00840B6C /* DefeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefeatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				810B451629D4AB9800A90B12 /* ConfView.swift */,
 				8177ABAD29D61B530071059D /* InfoView.swift */,
 				8177ABAF29D8BAA80071059D /* Info.swift */,
+				D4F4247D29DB4CED00840B6C /* DefeatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				8177ABAE29D61B530071059D /* InfoView.swift in Sources */,
 				D4DB4A2429CE41EB00194C3F /* RespostasView.swift in Sources */,
 				6BE881A529D37F9100AC287C /* RefreshAndOkButtons.swift in Sources */,
+				D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */,
 				6B35D96E29D215AD00C59E34 /* GeometryForm.swift in Sources */,
 				810B451929D4AC3F00A90B12 /* ModelView.swift in Sources */,
 				6B35D93529CB95EA00C59E34 /* ContentView.swift in Sources */,

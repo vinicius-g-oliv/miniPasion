@@ -10,13 +10,10 @@ struct RespostasView: View {
     
     @State var clickedButtonsIDs: [String] = []
     
-//    @State private var firstStep = false
-//    @State private var secondStep = false
-//    @State private var lastStep = true
     private let color: Color = .gray
     
-    
-    
+    @State var showResult: Bool = false
+  
     var body: some View {
         NavigationView {
             ZStack {
@@ -91,6 +88,7 @@ struct RespostasView: View {
     }
 }
 
+
 struct ColunaGrid : View {
     var i : Int
     var body : some View {
@@ -128,14 +126,25 @@ struct ColunaGrid : View {
                     .foregroundColor(.white)
                     .font(.system(size: 30, weight: .medium, design: .rounded))
                 
+                
             }
-            
-            
+           
+        
             
         }
         .frame(width: 100)
+        
+        
     }
 }
+
+//func compareArrays( firstArray: [String],  secondArray: [String]) -> any View {
+//    if firstArray != secondArray {
+//        return ContentView() //teste, pra chamar a view de "perdeu"
+//    } else {
+//        return ConfView() // teste, pra chamar a view de "ganhou
+//    }
+//}
 
 //struct Card: View {
 //    let word: String

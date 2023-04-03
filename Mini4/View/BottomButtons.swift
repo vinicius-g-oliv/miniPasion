@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct BottomButtons: View {
-    
+    @State var arraycerto = randomImage()
     @Binding var clickedButtonIDs: [String]
     //@State var num = 1
     var forms = GeometryForm.forms
     
+    
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
-
-//>>>>>>> TransicaoTelas
+    
+    //>>>>>>> TransicaoTelas
     var body: some View {
         HStack {
             GeometryReader() { geon in
@@ -31,26 +32,26 @@ struct BottomButtons: View {
                             
                         }
                     label: {
-////<<<<<<< HEAD
-//                            Image(systemName: "\(form.name)")
-//                            Rectangle()
-//                                .fill(form.color)
-//                                .frame(width: 80, height: 80)
-//=======
-                            ZStack {
-                                Rectangle()
-                                    .fill(form.color)
-                                
-                                    .frame(width: 80, height: 80)
-                                
-                                
-                                Image(form.image).resizable().frame(width: 30, height: 30)
-                                
-                            }
+                        ////<<<<<<< HEAD
+                        //                            Image(systemName: "\(form.name)")
+                        //                            Rectangle()
+                        //                                .fill(form.color)
+                        //                                .frame(width: 80, height: 80)
+                        //=======
+                        ZStack {
+                            Rectangle()
+                                .fill(form.color)
+                            
+                                .frame(width: 80, height: 80)
                             
                             
-//>>>>>>> TransicaoTelas
+                            Image(form.image).resizable().frame(width: 30, height: 30)
+                            
                         }
+                        
+                        
+                        //>>>>>>> TransicaoTelas
+                    }
                     }
                 }
                 .position(CGPoint(x: geon.size.width * 0.5, y: geon.size.height * 0.85))
@@ -69,7 +70,13 @@ struct BottomButtons: View {
                 Button(action: {
                     
                     saveArray()
-                    
+                    if clickedButtonIDs == arraycerto.randomImages {
+                        //tela vitória
+                                     
+                        
+                    } else {
+                        print("Não foi dessa vez, tente novamente!")
+                    }
                     print("Bolinha 2")
                 }, label: {
                     Circle()
@@ -79,22 +86,17 @@ struct BottomButtons: View {
             }
         }
     }
-
+    
+    
+    func saveArray() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(clickedButtonIDs, forKey: "clickedButtonIDs")
         
-        func saveArray() {
-                let userDefaults = UserDefaults.standard
-                userDefaults.set(clickedButtonIDs, forKey: "clickedButtonIDs")
-                
-                let saveArrayForms = userDefaults.array(forKey: "clickedButtonIDs") as? [String]
-                
-                print("\(String(describing: saveArrayForms))")
-                
-            }
+        let saveArrayForms = userDefaults.array(forKey: "clickedButtonIDs") as? [String]
+        
+        print("\(String(describing: saveArrayForms))")
+        
     }
+}
 
 
-//struct BottomButtons_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BottomButtons(clickedButtonIDs: <#Binding<[Int]>#>)
-//    }
-//}
