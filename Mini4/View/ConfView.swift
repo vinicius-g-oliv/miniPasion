@@ -80,10 +80,10 @@ struct ConfView: View {
 
 
 
-struct ConfViewe: PreviewProvider {
-    static var previews: some View {
-        ConfView()
-        
-    }
-}
+//struct ConfViewe: PreviewProvider {
+//    static var previews: some View {
+//        ConfView()
+//        
+//    }
+//}
 
