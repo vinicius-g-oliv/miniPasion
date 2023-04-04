@@ -55,7 +55,7 @@ struct BottomButtons: View {
                         
                         
                         //>>>>>>> TransicaoTelas
-                    }
+                    
                     }
                     HStack {
                         Button(action: {

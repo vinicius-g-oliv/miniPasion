@@ -17,7 +17,7 @@ struct RespostasView: View {
     var body: some View {
         GeometryReader() { geo in
            
-            NavigationView {
+//Navigation            View {
                 ZStack {
                     
                     VStack {
@@ -91,7 +91,7 @@ struct RespostasView: View {
             } .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
+//}
 
 
 struct ColunaGrid : View {
