@@ -16,26 +16,27 @@ struct VictoryView: View {
                 .ignoresSafeArea()
             GeometryReader() { geo in
                 HStack {
-                    NavigationLink(destination: ConfView()) {
+                    NavigationLink(destination: GameView()) {
                         Image("botaoContinuar")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 244, height: 57)
-                            .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.65))
+                            
                     }
-                }
+                }.frame(width: 244, height: 57)
+                    .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.65))
+
                 HStack {
                     NavigationLink(destination: ContentView()) {
                         Image("sair")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 188, height: 57)
-                            .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.74))
+                            
                     
-                    }
+                    }.frame(width: 188, height: 57)
+                        .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.74))
                 }
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 

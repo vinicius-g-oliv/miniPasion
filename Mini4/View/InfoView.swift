@@ -33,22 +33,13 @@ struct InfoView: View {
                                 .font(Font.system(size: 20, weight: .semibold))
                                 .foregroundColor(Color.white)
                                 .position(CGPoint(x: geo.size.width * 0.35, y: geo.size.height / 25))
-                            //MARK: CLose button
-                            
-                            
+                 
                         }
-                        
-                       
-                        
-                        //MARK: Informacoes title
-                       
-                   
-                        
-                        
+              
                     }.frame(width: 300, height: 300).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5))
                 }
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 

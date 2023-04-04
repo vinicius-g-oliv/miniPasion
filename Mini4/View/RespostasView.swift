@@ -7,22 +7,22 @@
 
 import SwiftUI
 struct RespostasView: View {
-    
+    var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
+    @State var clickedButtonsName: [String] = []
     
     private let color: Color = .gray
     
     @State var showResult: Bool = false
-  
+    
     var body: some View {
         GeometryReader() { geo in
-           
-//Navigation            View {
+            
+            NavigationView {
                 ZStack {
                     
                     VStack {
-    //                        Text("Fácil")
-    //                            .font(.system(size: 30, weight: .medium, design: .rounded))
+                        
                         
                         ZStack {
                             Grid {
@@ -31,7 +31,7 @@ struct RespostasView: View {
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
-                                                
+                                            
                                                 .foregroundColor(Color("roundedretangle"))
                                                 .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*3 < clickedButtonsIDs.count){
@@ -62,7 +62,7 @@ struct RespostasView: View {
                                         }
                                         
                                     }
-                                }
+                                }.disabled(true)
                                 GridRow {
                                     ForEach(0..<3) { index in
                                         ZStack {
@@ -79,19 +79,19 @@ struct RespostasView: View {
                                             }
                                         }
                                         
-                                    }                                }
+                                    }                                }.disabled(true)
                             }
                         }
                         
                     }.frame(width: 100).position(x:geo.size.width * 0.5 ,y: geo.size.height * 0.3)
-                    BottomButtons(clickedButtonIDs: $clickedButtonsIDs)
+                    BottomButtons(arraycerto: randomImages, clickedButtonIDs: $clickedButtonsIDs, clickedButtonName: $clickedButtonsName)
                     
                 }.background(Color("background"))
                 
-            } .navigationBarTitleDisplayMode(.inline)
+            }.navigationBarBackButtonHidden()
         }
     }
-//}
+}
 
 
 struct ColunaGrid : View {
@@ -133,8 +133,8 @@ struct ColunaGrid : View {
                 
                 
             }
-           
-        
+            
+            
             
         }
         .frame(width: 100)
@@ -143,42 +143,3 @@ struct ColunaGrid : View {
     }
 }
 
-//func compareArrays( firstArray: [String],  secondArray: [String]) -> any View {
-//    if firstArray != secondArray {
-//        return ContentView() //teste, pra chamar a view de "perdeu"
-//    } else {
-//        return ConfView() // teste, pra chamar a view de "ganhou
-//    }
-//}
-
-//struct Card: View {
-//    let word: String
-////    private let color: Color = .gray
-//
-////    var body: some View {
-////        VStack {
-////            ZStack {
-////                Rectangle()
-////                    .frame(width: 90, height: 70)
-////                    .foregroundColor(color)
-////                    .cornerRadius(15)
-////                Text(word)
-////                    .foregroundColor(.white)
-////                    .font(.system(size: 30, weight: .medium, design: .rounded))
-////            }
-////        }
-////        .frame(width: 100)
-////    }
-////}
-//
-//func getCard(word: String) -> Card {
-//    return Card(word: word)
-//}
-////        struct ContentView_Previews: PreviewProvider {
-////            static var previews: some View {
-////                RespostasView(forms: GeometryForm)
-////            }
-////        }
-//
-//
-//

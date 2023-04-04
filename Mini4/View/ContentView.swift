@@ -27,14 +27,10 @@ struct ContentView: View {
                     }, label: {
                         Image(systemName: "info.circle").resizable().foregroundColor(.white).frame(width:30, height: 30)
                     }).position(x: geo.size.height * 0.45 , y: geo.size.height * 0.1)
-                    //                    NavigationLink(destination: InfoView()) {
-                    //                        Image(systemName: "info.circle").labelStyle(.iconOnly).dynamicTypeSize(.accessibility2).foregroundColor(.white)
-                    //                    }.position(CGPoint(x: geo.size.width * 0.9, y: geo.size.height * 0.05))
-                    
                     
                     //MARK: Facil
                     
-                    NavigationLink(destination: ConfView()) {
+                    NavigationLink(destination: GameView()) {
                         ZStack {
                             
                             Image("começar").frame(maxWidth: 250, maxHeight: 86).bold()
@@ -58,7 +54,7 @@ struct ContentView: View {
                 //
                 InfoView(title: "Informaçōes", show:$showPopUp )
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 

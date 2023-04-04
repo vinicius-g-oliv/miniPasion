@@ -25,18 +25,21 @@ extension Random {
                         Random(image: "circulo rosa", name: "circulo"),
                         Random(image: "circulo roxo", name: "circulo"),
                         Random(image: "circulo verde", name: "circulo"),
-                        Random(image: "estrela amarela", name: "circulo"),
+                        
+                        
+                        
+                        Random(image: "estrela amarela", name: "estrela"),
                         Random(image: "estrela azul", name: "estrela"),
                         Random(image: "estrela laranja", name: "estrela"),
                         Random(image: "estrela pink", name: "estrela"),
                         Random(image: "estrela rosa claro", name: "estrela"),
                         Random(image: "estrela rosa", name: "estrela"),
-                        Random(image: "estrela roxo", name: "estrela"),
+                        Random(image: "estrela roxa", name: "estrela"),
                         Random(image: "estrela verde", name: "estrela"),
                         
                         
                         
-                        Random(image: "hexagono amarela", name: "hexagono"),
+                        Random(image: "hexagono amarelo", name: "hexagono"),
                         Random(image: "hexagono azul", name: "hexagono"),
                         Random(image: "hexagono laranja", name: "hexagono"),
                         Random(image: "hexagono pink", name: "hexagono"),
@@ -95,37 +98,35 @@ extension Random {
 }
 
 class randomImage: ObservableObject{
-    var randomImages = [String]()
+    var randomImages :  [String] = []
     var images: [Random]  = Random.forms
     
-    
-    
     func randon() -> String{
-        var imagensRan: Random
+//        var imagensRan: Random
         
-        
-        imagensRan = images.randomElement()!
-        if randomImages.isEmpty {
-            randomImages.append(imagensRan.name)
+       
+        if let imagensRan = images.randomElement() {
             
-            return imagensRan.image
-        }else if (imagensRan.name == randomImages.last) {
+            if randomImages.isEmpty {
+                randomImages.append(imagensRan.name)
+                
+                return imagensRan.image
             
-            imagensRan = images.randomElement()!
-            randomImages.append(imagensRan.name)
+            }else {
+                randomImages.append(imagensRan.name)
+                print(imagensRan.name)
+                print(randomImages)
+                return imagensRan.image
+            }
             
-            return imagensRan.image
-        }else {
-            randomImages.append(imagensRan.name)
-            
-            return imagensRan.image
         }
         
+        return " "
     }
     
     func returnArray() -> [String]{
         
-        
+        print(randomImages)
         return randomImages
     }
 }
