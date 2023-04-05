@@ -16,7 +16,7 @@ struct VictoryView: View {
                 .ignoresSafeArea()
             GeometryReader() { geo in
                 HStack {
-                    NavigationLink(destination: GameView()) {
+                    NavigationLink(destination: FormsView()) {
                         Image("botaoContinuar")
                             .resizable()
                             .scaledToFill()

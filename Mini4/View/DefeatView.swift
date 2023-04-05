@@ -17,7 +17,7 @@ struct DefeatView: View {
             
             GeometryReader() { geo in
                 HStack {
-                    NavigationLink(destination: GameView()) {
+                    NavigationLink(destination: FormsView()) {
                         Image("tentarNovamente")
                             .resizable()
                             .scaledToFit()

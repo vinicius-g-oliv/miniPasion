@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct RespostasView: View {
+struct Respostaslv1: View {
     var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
     @State var clickedButtonsName: [String] = []
@@ -27,16 +27,17 @@ struct RespostasView: View {
                         ZStack {
                             Grid {
                                 GridRow {
-                                    ForEach(0..<3) { index in
+                                    ForEach(0..<2) { index in
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
                                             
                                                 .foregroundColor(Color("roundedretangle"))
                                                 .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
-                                            if ( index*3 < clickedButtonsIDs.count){
+                                           
+                                            if ( index < clickedButtonsIDs.count){
                                                 //                                                Image()
-                                                Image("\(clickedButtonsIDs[index*3])").resizable()
+                                                Image("\(clickedButtonsIDs[index*2])").resizable()
                                                     .scaledToFit()
                                                     .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
@@ -46,14 +47,14 @@ struct RespostasView: View {
                                     }
                                 }
                                 GridRow {
-                                    ForEach(0..<3) { index in
+                                    ForEach(0..<2) { index in
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
                                                 .foregroundColor(Color("roundedretangle"))
                                                 .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
-                                            if ( index*3+1 < clickedButtonsIDs.count){
-                                                Image("\(clickedButtonsIDs[index*3+1])").resizable()
+                                            if ( index*2+1 < clickedButtonsIDs.count){
+                                                Image("\(clickedButtonsIDs[index*2+1])").resizable()
                                                     .scaledToFit()
                                                     .frame(width: 30,height: 30)
                                                     .foregroundColor(.white)
@@ -63,23 +64,25 @@ struct RespostasView: View {
                                         
                                     }
                                 }.disabled(true)
-                                GridRow {
-                                    ForEach(0..<3) { index in
-                                        ZStack {
-                                            Rectangle()
-                                                .frame(width: 90, height: 70)
-                                                .foregroundColor(Color("roundedretangle"))
-                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
-                                            if ( index*3+2 < clickedButtonsIDs.count){
-                                                Image("\(clickedButtonsIDs[index*3+2])").resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 30,height: 30)
-                                                    .foregroundColor(.white)
-                                                    .font(.system(size: 30, weight: .medium, design: .rounded))
-                                            }
-                                        }
-                                        
-                                    }                                }.disabled(true)
+//                                GridRow {
+//                                    ForEach(0..<2) { index in
+//                                        ZStack {
+//                                            Rectangle()
+//                                                .frame(width: 90, height: 70)
+//                                                .foregroundColor(Color("roundedretangle"))
+//                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
+//                                            if ( index*3+2 < clickedButtonsIDs.count){
+//                                                Image("\(clickedButtonsIDs[index*3+2])").resizable()
+//                                                    .scaledToFit()
+//                                                    .frame(width: 30,height: 30)
+//                                                    .foregroundColor(.white)
+//                                                    .font(.system(size: 30, weight: .medium, design: .rounded))
+//                                            }
+//                                        }
+//
+//                                    }
+//                                    
+//                                }.disabled(true)
                             }
                         }
                         

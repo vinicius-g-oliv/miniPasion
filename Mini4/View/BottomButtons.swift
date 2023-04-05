@@ -11,7 +11,8 @@ struct BottomButtons: View {
     @StateObject var arraycerto: randomImage
     @Binding var clickedButtonIDs: [String]
     @Binding var clickedButtonName: [String]
-    //@State var num = 1
+    
+    var entradas : Int = 6
     var forms = GeometryForm.forms
     
     
@@ -28,7 +29,7 @@ struct BottomButtons: View {
                             HStack {
                                 Button {
                                     
-                                    if clickedButtonIDs.count < 9 {
+                                    if clickedButtonIDs.count < entradas {
                                         clickedButtonIDs.append(form.image)
                                         clickedButtonName.append(form.name)
                                       print(clickedButtonName)

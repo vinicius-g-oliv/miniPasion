@@ -10,6 +10,7 @@ import SwiftUI
 struct RectangleBottom: View {
     
     var randomImages: randomImage
+    
     @State var clickedButtonsIDs: [String] = [] //array vazio a ser preenchido
     @State var clickedButtonsName: [String] = []
 
