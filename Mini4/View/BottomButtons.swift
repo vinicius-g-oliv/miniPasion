@@ -11,13 +11,13 @@ struct BottomButtons: View {
     @StateObject var arraycerto: randomImage
     @Binding var clickedButtonIDs: [String]
     @Binding var clickedButtonName: [String]
+    @State var buttonActive = true
     
     var entradas : Int = 6
     var forms = GeometryForm.forms
     
-    
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-   
+    
     var body: some View {
         GeometryReader() { geon in
             ZStack {
@@ -32,7 +32,7 @@ struct BottomButtons: View {
                                     if clickedButtonIDs.count < entradas {
                                         clickedButtonIDs.append(form.image)
                                         clickedButtonName.append(form.name)
-                                      print(clickedButtonName)
+                                        print(clickedButtonName)
                                     }
                                     
                                 }
@@ -45,19 +45,20 @@ struct BottomButtons: View {
                                     
                                 }
                             }
-                        }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.5)
+                            }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.5)
                         }
                     }
                     HStack {
                         Button(action: {
-                            clickedButtonIDs.removeAll()
-                            clickedButtonName.removeAll()
-                            print("\(clickedButtonIDs)")
-                          
+                            
+                            clickedButtonIDs.removeLast()
+                            clickedButtonName.removeLast()
+                            
+                            
                         }, label: {
                             Image("desfazer").resizable().frame(width: 50, height: 50)
                             
-                        }).position(x: geon.size.width * 0.1, y: geon.size.height * 0.5)
+                        }).position(x: geon.size.width * 0.1, y: geon.size.height * 0.5).disabled(disableButtom())
                         
                         
                         if clickedButtonName == arraycerto.randomImages {
@@ -65,7 +66,7 @@ struct BottomButtons: View {
                                 Image("ok")
                                     .resizable()
                                     .frame(width: 50, height: 50)
-        
+                                
                             }).frame(width: 50, height: 50).position(x: geon.size.width * 0.4, y: geon.size.height * 0.5)
                         }
                         else {
@@ -73,7 +74,7 @@ struct BottomButtons: View {
                                 Image("ok")
                                     .resizable()
                                     .frame(width: 50, height: 50)
-                                    
+                                
                             }).frame(width: 50, height: 50).position(x: geon.size.width * 0.4, y: geon.size.height * 0.5)
                             
                         }
@@ -82,8 +83,15 @@ struct BottomButtons: View {
                     
                 }
             }.position(x: geon.size.width * 0.5, y: geon.size.height * 0.7)
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
         
+    }
+    func disableButtom() -> Bool{
+        if clickedButtonName.isEmpty && clickedButtonIDs.isEmpty {
+            buttonActive = false
+            return buttonActive
+        }
+        return buttonActive
     }
     
     

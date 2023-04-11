@@ -62,7 +62,7 @@ struct ContentView: View {
                 }
                 InfoView(title: "Informaçōes", show:$showPopUp )
             }
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

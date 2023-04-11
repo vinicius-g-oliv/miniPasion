@@ -10,7 +10,6 @@ import SwiftUI
 struct InfoView: View {
     
     var title: String
-    
     @Binding var show: Bool
     var body: some View {
         
@@ -73,7 +72,7 @@ struct InfoView: View {
                     }.frame(width: 300, height: 300)
                 }.frame(width: 300, height: 300)
             }
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

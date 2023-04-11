@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct RectangleBottom: View {
-    
     var randomImages: randomImage
-    
     @State var clickedButtonsIDs: [String] = [] //array vazio a ser preenchido
     @State var clickedButtonsName: [String] = []
-
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             Rectangle()
@@ -21,6 +19,6 @@ struct RectangleBottom: View {
                 .ignoresSafeArea()
                 .frame(width: 400, height: 275)
             BottomButtons(arraycerto: randomImages, clickedButtonIDs: $clickedButtonsIDs, clickedButtonName: $clickedButtonsName)
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }

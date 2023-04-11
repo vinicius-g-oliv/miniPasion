@@ -36,7 +36,7 @@ struct VictoryView: View {
                         .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.74))
                 }
             }
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

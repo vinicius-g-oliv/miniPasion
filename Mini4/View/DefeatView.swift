@@ -39,10 +39,9 @@ struct DefeatView: View {
                 }
             }
 
-        }.navigationBarBackButtonHidden()
+        }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }
-
 struct DefeatView_Previews: PreviewProvider {
     static var previews: some View {
         DefeatView()

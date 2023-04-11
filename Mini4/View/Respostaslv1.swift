@@ -20,10 +20,7 @@ struct Respostaslv1: View {
             
             NavigationView {
                 ZStack {
-                    
                     VStack {
-                        
-                        
                         ZStack {
                             Grid {
                                 GridRow {
@@ -34,9 +31,7 @@ struct Respostaslv1: View {
                                             
                                                 .foregroundColor(Color("roundedretangle"))
                                                 .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
-                                           
-                                            if ( index < clickedButtonsIDs.count){
-                                                //                                                Image()
+                                            if ( index*2 < clickedButtonsIDs.count){
                                                 Image("\(clickedButtonsIDs[index*2])").resizable()
                                                     .scaledToFit()
                                                     .frame(width: 30,height: 30)
@@ -61,28 +56,8 @@ struct Respostaslv1: View {
                                                     .font(.system(size: 30, weight: .medium, design: .rounded))
                                             }
                                         }
-                                        
                                     }
                                 }.disabled(true)
-//                                GridRow {
-//                                    ForEach(0..<2) { index in
-//                                        ZStack {
-//                                            Rectangle()
-//                                                .frame(width: 90, height: 70)
-//                                                .foregroundColor(Color("roundedretangle"))
-//                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
-//                                            if ( index*3+2 < clickedButtonsIDs.count){
-//                                                Image("\(clickedButtonsIDs[index*3+2])").resizable()
-//                                                    .scaledToFit()
-//                                                    .frame(width: 30,height: 30)
-//                                                    .foregroundColor(.white)
-//                                                    .font(.system(size: 30, weight: .medium, design: .rounded))
-//                                            }
-//                                        }
-//
-//                                    }
-//                                    
-//                                }.disabled(true)
                             }
                         }
                         
@@ -95,54 +70,3 @@ struct Respostaslv1: View {
         }
     }
 }
-
-
-struct ColunaGrid : View {
-    var i : Int
-    var body : some View {
-        VStack {
-            
-            ZStack {
-                Rectangle()
-                    .frame(width: 90, height: 70)
-                    .foregroundColor(.gray)
-                    .cornerRadius(15)
-                Text("\(i)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
-                
-            }
-            
-            
-            ZStack {
-                Rectangle()
-                    .frame(width: 90, height: 70)
-                    .foregroundColor(.gray)
-                    .cornerRadius(15)
-                Text("\(i+1)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
-                
-            }
-            
-            ZStack {
-                Rectangle()
-                    .frame(width: 90, height: 70)
-                    .foregroundColor(.gray)
-                    .cornerRadius(15)
-                Text("\(i+2)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
-                
-                
-            }
-            
-            
-            
-        }
-        .frame(width: 100)
-        
-        
-    }
-}
-

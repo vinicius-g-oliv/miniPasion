@@ -10,11 +10,8 @@ struct Respostaslv2: View {
     var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
     @State var clickedButtonsName: [String] = []
-    
-    private let color: Color = .gray
-    
     @State var showResult: Bool = false
-    
+    private let color: Color = .gray
     var body: some View {
         GeometryReader() { geo in
             
