@@ -14,25 +14,26 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color("background").ignoresSafeArea()
-                Image("backgroundImage").resizable()
+               
                 
                 VStack {
                     GeometryReader() { geo in
+                        Image("logo").resizable().scaledToFit().frame(width: 333, height: 93).position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.25))
                         Button(action: {
                             withAnimation(.linear(duration: 0.3)) {
                                 showPopUp.toggle()
                             }
                         }, label: {
                             Image(systemName: "info.circle").resizable().foregroundColor(.white).frame(width:30, height: 30)
-                        }).position(x: geo.size.height * 0.45 , y: geo.size.height * 0.1)
+                        }).position(x: geo.size.height * 0.45 , y: geo.size.height * 0.03)
                         
                         //MARK: Facil
                         
                         NavigationLink(destination: FormsView()) {
                             ZStack {
                                 
-                                Image("começar").frame(maxWidth: 250, maxHeight: 86).bold()
-                                Text("Facil").bold().font(Font.system(size: 20)).foregroundColor(.white)
+                                Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
+                                Text("Facil").bold().font(Font.system(size: 30)).foregroundColor(.white)
                             }
                         }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5))
                         
@@ -42,21 +43,21 @@ struct ContentView: View {
                         NavigationLink(destination: FormsViewMedium()) {
                             ZStack {
                                 
-                                Image("começar").frame(maxWidth: 250, maxHeight: 86).bold()
-                                Text("Médio").bold().font(Font.system(size: 20)).foregroundColor(.white)
+                                Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
+                                Text("Médio").bold().font(Font.system(size: 30)).foregroundColor(.white)
                             }
-                        }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.7))
+                        }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.68))
+                        
                         
                         
                         //MARK: Dificil
-                        
                         NavigationLink(destination: FormsView()) {
                             ZStack {
                                 
-                                Image("começar").frame(maxWidth: 250, maxHeight: 86).bold()
-                                Text("Dificil").bold().font(Font.system(size: 20)).foregroundColor(.white)
+                                Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
+                                Text("Dificil").bold().font(Font.system(size: 30)).foregroundColor(.white)
                             }
-                        }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.9))
+                        }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.86))
                         
                     }
                 }

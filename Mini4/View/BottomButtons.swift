@@ -91,7 +91,7 @@ struct BottomButtons: View {
             buttonActive = false
             return buttonActive
         }
-        return buttonActive
+        return false
     }
     
     

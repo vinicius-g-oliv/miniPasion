@@ -132,13 +132,9 @@ struct ColunaGridlv2 : View {
                 
                 
             }
-            
-            
-            
+     
         }
         .frame(width: 100)
-        
-        
     }
 }
 
