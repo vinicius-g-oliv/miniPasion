@@ -13,7 +13,7 @@ struct BottomButtons: View {
     @Binding var clickedButtonName: [String]
     @State var buttonActive = true
     
-    var entradas : Int = 6
+    var entradas : Int = 9
     var forms = GeometryForm.forms
     
     let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
