@@ -12,7 +12,7 @@ struct Mini4App: App {
     var body: some Scene {
         let images = randomImage()
         WindowGroup {
-            Respostaslv1(randomImages: images)
+            ContentView()
         }
     }
 }

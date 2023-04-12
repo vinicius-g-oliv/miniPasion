@@ -48,15 +48,16 @@ struct InfoView: View {
                                 
                             }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.3))
                             HStack {
-                                Button(action: {
-                                    withAnimation(.linear(duration: 0.3)) {
-                                        print("B")
+                                
+                                NavigationLink(destination: introview()) {
+                                    HStack {
+                                        Image("questions").resizable()
+                                    }.frame(width: 30,height: 30)
+                                    HStack {
+                                        Text("Formas Geométricas").bold().font(Font.system(size: 20)).foregroundColor(.white)
                                     }
-                                }, label: {
-                                    
-                                    Image("questions").resizable().frame(width: 30,height: 30)
-                                    Text("asa")
-                                })
+                                }
+                                
                             }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.5))
                             HStack {
                                 Button(action: {
