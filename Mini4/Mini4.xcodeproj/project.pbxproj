@@ -31,7 +31,6 @@
 		814ED54429DE2EA800578723 /* FormsViewMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED54329DE2EA800578723 /* FormsViewMedium.swift */; };
 		814ED54629DE2EC000578723 /* Respostaslv2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED54529DE2EC000578723 /* Respostaslv2.swift */; };
 		8177ABAE29D61B530071059D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAD29D61B530071059D /* InfoView.swift */; };
-		8177ABB029D8BAA80071059D /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAF29D8BAA80071059D /* Info.swift */; };
 		D4DB4A2429CE41EB00194C3F /* Respostaslv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4A2329CE41EB00194C3F /* Respostaslv1.swift */; };
 		D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4247D29DB4CED00840B6C /* DefeatView.swift */; };
 /* End PBXBuildFile section */
@@ -82,7 +81,6 @@
 		814ED54329DE2EA800578723 /* FormsViewMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewMedium.swift; sourceTree = "<group>"; };
 		814ED54529DE2EC000578723 /* Respostaslv2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respostaslv2.swift; sourceTree = "<group>"; };
 		8177ABAD29D61B530071059D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		8177ABAF29D8BAA80071059D /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		81FEB69E29E5D70F0043EE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D4DB4A2329CE41EB00194C3F /* Respostaslv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Respostaslv1.swift; path = View/Respostaslv1.swift; sourceTree = SOURCE_ROOT; };
 		D4F4247D29DB4CED00840B6C /* DefeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefeatView.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				814ED54329DE2EA800578723 /* FormsViewMedium.swift */,
 				813D2CB229E7233500941472 /* FormsViewHard.swift */,
 				8177ABAD29D61B530071059D /* InfoView.swift */,
-				8177ABAF29D8BAA80071059D /* Info.swift */,
 				813D2CB629E733FA00941472 /* FormsInfoView.swift */,
 				813D2CB829E734E400941472 /* introview.swift */,
 				6B8FA32729DB4CB50072D701 /* VictoryView.swift */,
@@ -353,7 +350,6 @@
 				6B35D93529CB95EA00C59E34 /* ContentView.swift in Sources */,
 				6B35D97229D21B8D00C59E34 /* BottomButtons.swift in Sources */,
 				813D2CB929E734E400941472 /* introview.swift in Sources */,
-				8177ABB029D8BAA80071059D /* Info.swift in Sources */,
 				813D2CB329E7233500941472 /* FormsViewHard.swift in Sources */,
 				6BE8819F29D35F5500AC287C /* RectangleBottom.swift in Sources */,
 				814ED54629DE2EC000578723 /* Respostaslv2.swift in Sources */,
