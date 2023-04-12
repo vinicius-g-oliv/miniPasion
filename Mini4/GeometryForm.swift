@@ -25,22 +25,3 @@ extension GeometryForm {
                         GeometryForm(id: 8, name: "hexagono", color: .black, image: "hexagono laranja")]
     
 }
-
-//struct WhiteForm: Hashable, Identifiable {
-//    let id: Int
-//    let name: String
-//    let image: String
-//}
-//
-//extension WhiteForm {
-//
-//    static let forms = [WhiteForm(id: 1, name: "circulo", image: "circulo branco"),
-//                        WhiteForm(id: 2, name: "triangulo", image: "triangulo branco"),
-//                        WhiteForm(id: 3,name: "pentagono", image: "pentagono branco"),
-//                        WhiteForm(id: 4,name: "estrela", image: "estrela branca"),
-//                        WhiteForm(id: 5,name: "retangulo", image: "retangulo branco"),
-//                        WhiteForm(id: 6,name: "oval", image: "oval branco"),
-//                        WhiteForm(id: 7,name: "quadrado", image: "quadrado branco"),
-//                        WhiteForm(id: 8,name: "hexagono", image: "hexagono branco")]
-//
-//}

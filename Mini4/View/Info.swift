@@ -11,7 +11,7 @@ import SwiftUI
 struct Info: View {
     
     var title: String
-    
+    @State private var showPopUp: Bool = false
     @Binding var show: Bool
     var body: some View {
         ZStack {
