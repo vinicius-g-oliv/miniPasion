@@ -17,10 +17,21 @@ struct Respostaslv1: View {
     
     var body: some View {
         GeometryReader() { geo in
-            
+          
             NavigationView {
                 ZStack {
+                   
                     VStack {
+                       
+                           
+                      
+                        Image("home preenchido").resizable().frame(width: 30,height: 30)
+                    
+                          
+                            
+                            
+                      
+                       
                         ZStack {
                             Grid {
                                 GridRow {
@@ -29,8 +40,8 @@ struct Respostaslv1: View {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
                                             
-                                                .foregroundColor(Color("roundedretangle"))
-                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
+                                                .foregroundColor(Color("roundedretangle")).opacity(0.3)
+                                                .padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*2 < clickedButtonsIDs.count){
                                                 Image("\(clickedButtonsIDs[index*2])").resizable()
                                                     .scaledToFit()
@@ -46,8 +57,8 @@ struct Respostaslv1: View {
                                         ZStack {
                                             Rectangle()
                                                 .frame(width: 90, height: 70)
-                                                .foregroundColor(Color("roundedretangle"))
-                                                .cornerRadius(15).padding(.horizontal, 10).padding(.vertical, 10)
+                                                .foregroundColor(Color("roundedretangle")).opacity(0.3)
+                                                .padding(.horizontal, 10).padding(.vertical, 10)
                                             if ( index*2+1 < clickedButtonsIDs.count){
                                                 Image("\(clickedButtonsIDs[index*2+1])").resizable()
                                                     .scaledToFit()

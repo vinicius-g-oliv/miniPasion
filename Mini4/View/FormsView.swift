@@ -48,7 +48,7 @@ struct FormsView: View {
                     }
                     
                     
-                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.4)) .buttonStyle(.borderedProminent)
+                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5)) .buttonStyle(.borderedProminent)
                 
 //                HStack {
 //

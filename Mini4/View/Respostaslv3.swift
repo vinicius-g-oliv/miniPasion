@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct Respostaslv2: View {
+struct Respostaslv3: View {
     var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
     @State var clickedButtonsName: [String] = []
@@ -60,6 +60,24 @@ struct Respostaslv2: View {
                                         
                                     }
                                 }
+                                GridRow {
+                                    ForEach(0..<3) { index in
+                                        ZStack {
+                                            Rectangle()
+                                                .frame(width: 90, height: 70)
+                                                .foregroundColor(Color("roundedretangle")).opacity(0.3)
+                                                .padding(.horizontal, 10).padding(.vertical, 10)
+                                            if ( index+6 < clickedButtonsIDs.count){
+                                                Image("\(clickedButtonsIDs[index+6])").resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 30,height: 30)
+                                                    .foregroundColor(.white)
+                                                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                                            }
+                                        }
+                                        
+                                    }
+                                }
                             }
                         }
                         
@@ -74,7 +92,7 @@ struct Respostaslv2: View {
 }
 
 
-struct ColunaGridlv2 : View {
+struct ColunaGridlv3 : View {
     var i : Int
     var body : some View {
         VStack {

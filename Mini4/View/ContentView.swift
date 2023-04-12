@@ -51,7 +51,7 @@ struct ContentView: View {
                         
                         
                         //MARK: Dificil
-                        NavigationLink(destination: FormsView()) {
+                        NavigationLink(destination: FormsViewHard()) {
                             ZStack {
                                 
                                 Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()

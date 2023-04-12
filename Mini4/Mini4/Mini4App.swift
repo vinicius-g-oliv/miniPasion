@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct Mini4App: App {
     var body: some Scene {
+        let images = randomImage()
         WindowGroup {
-            ContentView()
+            Respostaslv1(randomImages: images)
         }
     }
 }
