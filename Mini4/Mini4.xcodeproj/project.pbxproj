@@ -18,6 +18,10 @@
 		6B35D97229D21B8D00C59E34 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D97129D21B8D00C59E34 /* BottomButtons.swift */; };
 		6B8FA32829DB4CB50072D701 /* VictoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8FA32729DB4CB50072D701 /* VictoryView.swift */; };
 		6BE8819F29D35F5500AC287C /* RectangleBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8819E29D35F5500AC287C /* RectangleBottom.swift */; };
+		6BFB1C5829E740FE00D0D088 /* Jost-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BFB1C5729E740FE00D0D088 /* Jost-Medium.ttf */; };
+		6BFB1C5A29E7410D00D0D088 /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BFB1C5929E7410D00D0D088 /* Jost-Bold.ttf */; };
+		6BFB1C5C29E7412C00D0D088 /* Jost-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BFB1C5B29E7412C00D0D088 /* Jost-Regular.ttf */; };
+		6BFB1C5E29E7413100D0D088 /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BFB1C5D29E7413100D0D088 /* Jost-SemiBold.ttf */; };
 		810B451729D4AB9800A90B12 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B451629D4AB9800A90B12 /* FormsView.swift */; };
 		810B451929D4AC3F00A90B12 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B451829D4AC3F00A90B12 /* ModelView.swift */; };
 		813D2CB329E7233500941472 /* FormsViewHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB229E7233500941472 /* FormsViewHard.swift */; };
@@ -64,6 +68,11 @@
 		6B35D97129D21B8D00C59E34 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		6B8FA32729DB4CB50072D701 /* VictoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryView.swift; sourceTree = "<group>"; };
 		6BE8819E29D35F5500AC287C /* RectangleBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBottom.swift; sourceTree = "<group>"; };
+		6BFB1C5629E740D200D0D088 /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jost-Bold.ttf"; path = "../../../../Academy/Memo/FontesMemo/Jost-Bold.ttf"; sourceTree = "<group>"; };
+		6BFB1C5729E740FE00D0D088 /* Jost-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Medium.ttf"; sourceTree = "<group>"; };
+		6BFB1C5929E7410D00D0D088 /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
+		6BFB1C5B29E7412C00D0D088 /* Jost-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Regular.ttf"; sourceTree = "<group>"; };
+		6BFB1C5D29E7413100D0D088 /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
 		810B451629D4AB9800A90B12 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
 		810B451829D4AC3F00A90B12 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		813D2CB229E7233500941472 /* FormsViewHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewHard.swift; sourceTree = "<group>"; };
@@ -112,6 +121,10 @@
 				6B35D93129CB95EA00C59E34 /* Mini4 */,
 				6B35D94229CB95EA00C59E34 /* Mini4Tests */,
 				6B35D94C29CB95EA00C59E34 /* Mini4UITests */,
+				6BFB1C5729E740FE00D0D088 /* Jost-Medium.ttf */,
+				6BFB1C5929E7410D00D0D088 /* Jost-Bold.ttf */,
+				6BFB1C5B29E7412C00D0D088 /* Jost-Regular.ttf */,
+				6BFB1C5D29E7413100D0D088 /* Jost-SemiBold.ttf */,
 				6B35D93029CB95EA00C59E34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 		6B35D94C29CB95EA00C59E34 /* Mini4UITests */ = {
 			isa = PBXGroup;
 			children = (
+				6BFB1C5629E740D200D0D088 /* Jost-Bold.ttf */,
 				6B35D94D29CB95EA00C59E34 /* Mini4UITests.swift */,
 				6B35D94F29CB95EA00C59E34 /* Mini4UITestsLaunchTests.swift */,
 			);
@@ -297,8 +311,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFB1C5829E740FE00D0D088 /* Jost-Medium.ttf in Resources */,
 				6B35D93A29CB95EA00C59E34 /* Preview Assets.xcassets in Resources */,
 				6B35D93729CB95EA00C59E34 /* Assets.xcassets in Resources */,
+				6BFB1C5A29E7410D00D0D088 /* Jost-Bold.ttf in Resources */,
+				6BFB1C5C29E7412C00D0D088 /* Jost-Regular.ttf in Resources */,
+				6BFB1C5E29E7413100D0D088 /* Jost-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = NFLV2P6B4S;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mini4/Info.plist;
@@ -531,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = NFLV2P6B4S;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mini4/Info.plist;

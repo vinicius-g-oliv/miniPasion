@@ -33,7 +33,7 @@ struct ContentView: View {
                             ZStack {
                                 
                                 Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
-                                Text("Facil").bold().font(Font.system(size: 30)).foregroundColor(.white)
+                                Text("Fácil").font(Font.custom("Jost-Bold", size: 30)).foregroundColor(.white)
                             }
                         }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.5))
                         
@@ -44,7 +44,7 @@ struct ContentView: View {
                             ZStack {
                                 
                                 Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
-                                Text("Médio").bold().font(Font.system(size: 30)).foregroundColor(.white)
+                                Text("Médio").font(Font.custom("Jost-Bold", size: 30)).foregroundColor(.white)
                             }
                         }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.68))
                         
@@ -55,7 +55,7 @@ struct ContentView: View {
                             ZStack {
                                 
                                 Image("começar").frame(maxWidth: 254.93, maxHeight: 93.66).bold()
-                                Text("Dificil").bold().font(Font.system(size: 30)).foregroundColor(.white)
+                                Text("Difícil").font(Font.custom("Jost-Bold", size: 30)).foregroundColor(.white)
                             }
                         }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.86))
                         

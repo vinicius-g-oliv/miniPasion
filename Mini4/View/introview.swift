@@ -11,19 +11,22 @@ struct introview: View {
                 Image("cardInfo").resizable()
                     .frame(width: 300, height: 300)
                 VStack {
-                    Image("formasInfos").resizable()
+                    Image("formasInfo").resizable()
+                       // .position(CGPoint(x: geo.size.width * 0.5 , y: * 0.5))
                         .frame(width: 99.6, height: 99.5)
+                        
                     
                     
                     Text("Como Jogar")
-                        .font(Font.system(size: 17, weight: .semibold))
+                        .font(Font.custom("Jost-SemiBold", size: 17))
                         .foregroundColor(Color.white)
                         .frame(height: 30)
                     
-                    Text("Essas são as formas geométricas que usamos para o jogo!").multilineTextAlignment(.center)
-                        .font(Font.system(size: 15, weight: .semibold))
+                    Text("Essas são as formas geométricas \n que usamos para o jogo!").multilineTextAlignment(.center)
+                        .font(Font.custom("Jost-SemiBold", size: 15))
+                        .lineLimit(2)
                         .foregroundColor(Color.white)
-                        .frame(width: 250, height: 40)
+                        .frame(width: 250, height: 50)
                 }
                 Button(action: {
                     count += 1
