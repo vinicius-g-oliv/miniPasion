@@ -11,6 +11,8 @@ struct InfoView: View {
     
     var title: String
     @Binding var show: Bool
+    @State private var showView : Bool =  false
+    
     var body: some View {
         
         ZStack {
@@ -29,7 +31,7 @@ struct InfoView: View {
                             HStack {
                                 Button(action: {
                                     withAnimation(.linear(duration: 0.3)) {
-                                        show = false
+                                        show.toggle()
                                     }
                                 }, label: {
                                     Image("close").resizable().frame(width: 30, height: 30)
@@ -48,16 +50,15 @@ struct InfoView: View {
                                 
                             }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.3))
                             HStack {
-                                
-                                NavigationLink(destination: introview()) {
-                                    HStack {
-                                        Image("questions").resizable()
-                                    }.frame(width: 30,height: 30)
-                                    HStack {
-                                        Text("Formas Geométricas").bold().font(Font.system(size: 20)).foregroundColor(.white)
+                                Button(action: {
+                                    withAnimation(.linear(duration: 0.3)) {
+                                        showView.toggle()
                                     }
-                                }
-                                
+                                }, label: {
+                                    
+                                    Image("questions").resizable().frame(width: 30,height: 30)
+                                    Text("asa").foregroundColor(.white)
+                                })
                             }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.5))
                             HStack {
                                 Button(action: {
@@ -73,6 +74,7 @@ struct InfoView: View {
                     }.frame(width: 300, height: 300)
                 }.frame(width: 300, height: 300)
             }
+            introview(show: $showView)
         }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }

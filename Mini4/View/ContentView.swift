@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showPopUp: Bool = false
-    
     var body: some View {
         NavigationView {
             ZStack {
