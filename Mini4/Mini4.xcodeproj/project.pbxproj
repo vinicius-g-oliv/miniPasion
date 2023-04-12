@@ -18,6 +18,7 @@
 		6B35D97229D21B8D00C59E34 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35D97129D21B8D00C59E34 /* BottomButtons.swift */; };
 		6B8FA32829DB4CB50072D701 /* VictoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8FA32729DB4CB50072D701 /* VictoryView.swift */; };
 		6BB0247629E5FCF00038BFA8 /* FormsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0247529E5FCF00038BFA8 /* FormsInfoView.swift */; };
+		6BB0247829E600FE0038BFA8 /* InitialFormsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0247729E600FE0038BFA8 /* InitialFormsInfoView.swift */; };
 		6BE8819F29D35F5500AC287C /* RectangleBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8819E29D35F5500AC287C /* RectangleBottom.swift */; };
 		810B451729D4AB9800A90B12 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B451629D4AB9800A90B12 /* FormsView.swift */; };
 		810B451929D4AC3F00A90B12 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B451829D4AC3F00A90B12 /* ModelView.swift */; };
@@ -61,6 +62,7 @@
 		6B35D97129D21B8D00C59E34 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		6B8FA32729DB4CB50072D701 /* VictoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryView.swift; sourceTree = "<group>"; };
 		6BB0247529E5FCF00038BFA8 /* FormsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsInfoView.swift; sourceTree = "<group>"; };
+		6BB0247729E600FE0038BFA8 /* InitialFormsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFormsInfoView.swift; sourceTree = "<group>"; };
 		6BE8819E29D35F5500AC287C /* RectangleBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBottom.swift; sourceTree = "<group>"; };
 		810B451629D4AB9800A90B12 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
 		810B451829D4AC3F00A90B12 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				8177ABAF29D8BAA80071059D /* Info.swift */,
 				6B8FA32729DB4CB50072D701 /* VictoryView.swift */,
 				D4F4247D29DB4CED00840B6C /* DefeatView.swift */,
+				6BB0247729E600FE0038BFA8 /* InitialFormsInfoView.swift */,
 				6BB0247529E5FCF00038BFA8 /* FormsInfoView.swift */,
 			);
 			path = View;
@@ -327,6 +330,7 @@
 				8177ABB029D8BAA80071059D /* Info.swift in Sources */,
 				6BE8819F29D35F5500AC287C /* RectangleBottom.swift in Sources */,
 				814ED54629DE2EC000578723 /* Respostaslv2.swift in Sources */,
+				6BB0247829E600FE0038BFA8 /* InitialFormsInfoView.swift in Sources */,
 				6B35D93329CB95EA00C59E34 /* Mini4App.swift in Sources */,
 				814ED54429DE2EA800578723 /* FormsViewMedium.swift in Sources */,
 			);
@@ -487,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = NFLV2P6B4S;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mini4/Info.plist;
@@ -518,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini4/Preview Content\"";
-				DEVELOPMENT_TEAM = NFLV2P6B4S;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mini4/Info.plist;
