@@ -8,12 +8,12 @@ struct introview: View {
     var body: some View {
         
         GeometryReader { geo in
-            
-            ZStack {
-
-                if show {
-                    // PopUp Window
-                    Color.black.opacity(show ? 0.3 : 0).edgesIgnoringSafeArea(.all)
+            if show {
+                // PopUp Window
+                Color.black.opacity(show ? 0.3 : 0).edgesIgnoringSafeArea(.all)
+                ZStack {
+                    
+                    
                     Image("cardInfo").resizable()
                         .frame(width: 300, height: 300)
                     VStack {
@@ -30,7 +30,7 @@ struct introview: View {
                             .font(Font.system(size: 15, weight: .semibold))
                             .foregroundColor(Color.white)
                             .frame(width: 250, height: 40)
-
+                        
                     }
                     Button(action: {
                         count += 1
@@ -43,11 +43,12 @@ struct introview: View {
                         
                     }).frame(width: 13, height: 25).position(x: geo.size.width * 0.95, y: geo.size.height * 0.5)
                     
-                }
-                FormsInfoView( show: $showFormsView)
-                
-                
-            }.position(x: geo.size.width * 0.5, y: geo.size.height * 0.5).navigationBarHidden(true)
+                    
+                    FormsInfoView( show: $showFormsView)
+                    
+                    
+                }.position(x: geo.size.width * 0.5, y: geo.size.height * 0.5).navigationBarHidden(true)
+            }
         }
     }
 }

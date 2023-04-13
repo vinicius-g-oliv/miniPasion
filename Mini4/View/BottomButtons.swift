@@ -16,15 +16,15 @@ struct BottomButtons: View {
      var entradas : Int = 9
     var forms = GeometryForm.forms
     
-    let gridItens = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    let gridItens = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
     
     var body: some View {
         GeometryReader() { geon in
+            Color("backbuttons").opacity(0.3)
             ZStack {
-                Image("background").resizable()
                 VStack {
                     
-                    LazyVGrid(columns: gridItens, spacing: 10) {
+                    LazyVGrid(columns: gridItens, spacing: 25) {
                         ForEach(forms, id: \.self) { form in
                             HStack {
                                 Button {
@@ -38,51 +38,39 @@ struct BottomButtons: View {
                                 }
                             label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 10)
+                                    RoundedRectangle(cornerRadius: 15)
                                         .fill(Color("roundedresposta"))
-                                        .frame(width: 80, height: 80)
-                                    Image(form.image).resizable().scaledToFit().frame(width: 40,height: 40)
+                                        .frame(width: 75, height: 59).opacity(0.5)
+                                    Image(form.image).resizable().scaledToFit().frame(width: 30.39,height: 30.39)
                                     
                                 }
                             }
-                            }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.5)
+                              
+                            }.position(x: geon.size.width * 0.12, y: geon.size.height * 0.4)
                         }
-                    }
-                    HStack {
-                        Button(action: {
-                            
-                            clickedButtonIDs.removeLast()
-                            clickedButtonName.removeLast()
-                            
-                            
-                        }, label: {
-                            Image("desfazer").resizable().frame(width: 50, height: 50)
-                            
-                        }).position(x: geon.size.width * 0.1, y: geon.size.height * 0.5).disabled(disableButtom())
-                        
-                        
-                        if clickedButtonName == arraycerto.randomImages {
-                            NavigationLink(destination: VictoryView(), label: {
-                                Image("ok")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
+                        HStack {
+                            Button(action: {
                                 
-                            }).frame(width: 50, height: 50).position(x: geon.size.width * 0.4, y: geon.size.height * 0.5)
-                        }
-                        else {
-                            NavigationLink(destination: DefeatView(), label: {
-                                Image("ok")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
+                                clickedButtonIDs.removeLast()
+                                clickedButtonName.removeLast()
                                 
-                            }).frame(width: 50, height: 50).position(x: geon.size.width * 0.4, y: geon.size.height * 0.5)
+                                
+                            }, label: {
+                                Image("desfazer").resizable().scaledToFit().frame(width: 60, height: 44)
+                                
+                            }).position(x: geon.size.width * 0.9, y: geon.size.height * 0.4).disabled(disableButtom())
                             
                         }
+                        
                     }
                     
-                    
+                  
+                   
+                   
                 }
-            }.position(x: geon.size.width * 0.5, y: geon.size.height * 0.7)
+               
+            }.position(x: geon.size.width * 0.49, y: geon.size.height * 0.05)
+            
         }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
         
     }
