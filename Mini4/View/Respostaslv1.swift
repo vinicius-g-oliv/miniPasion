@@ -17,21 +17,21 @@ struct Respostaslv1: View {
     
     var body: some View {
         GeometryReader() { geo in
-          
+            
             NavigationView {
                 ZStack {
-                   
-                    VStack {
-                       
-                           
-                      
-                        Image("home preenchido").resizable().frame(width: 30,height: 30)
                     
-                          
-                            
-                            
-                      
-                       
+                    VStack {
+                        
+                        
+                        
+                        Image("home preenchido").resizable().frame(width: 30,height: 30)
+                        
+                        
+                        
+                        
+                        
+                        
                         ZStack {
                             Grid {
                                 GridRow {

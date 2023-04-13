@@ -19,9 +19,7 @@ struct Respostaslv2: View {
                 ZStack {
                     
                     VStack {
-                        
-                        
-                        ZStack {
+                       ZStack {
                             Grid {
                                 GridRow {
                                     ForEach(0..<3) { index in

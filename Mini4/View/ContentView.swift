@@ -13,6 +13,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color("background").ignoresSafeArea()
+                Image("backgroundImage").resizable()
                
                 
                 VStack {
