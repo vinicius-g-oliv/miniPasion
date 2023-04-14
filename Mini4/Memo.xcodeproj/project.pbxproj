@@ -31,8 +31,6 @@
 		81545FF929E9D343003F445A /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81545FF829E9D343003F445A /* HowToPlayView.swift */; };
 		81545FFB29E9D3AA003F445A /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81545FFA29E9D3AA003F445A /* InfoViewModel.swift */; };
 		8177ABAE29D61B530071059D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAD29D61B530071059D /* InfoView.swift */; };
-		D46467FD29E7509B001C7C42 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46467FC29E7509B001C7C42 /* TutorialView.swift */; };
-		D46467FF29E750B9001C7C42 /* TutorialSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46467FE29E750B9001C7C42 /* TutorialSecondView.swift */; };
 		D4DB4A2429CE41EB00194C3F /* Answerslv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4A2329CE41EB00194C3F /* Answerslv1.swift */; };
 		D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4247D29DB4CED00840B6C /* DefeatView.swift */; };
 /* End PBXBuildFile section */
@@ -64,8 +62,6 @@
 		81545FFA29E9D3AA003F445A /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		8177ABAD29D61B530071059D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		81FEB69E29E5D70F0043EE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D46467FC29E7509B001C7C42 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
-		D46467FE29E750B9001C7C42 /* TutorialSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSecondView.swift; sourceTree = "<group>"; };
 		D4DB4A2329CE41EB00194C3F /* Answerslv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Answerslv1.swift; path = View/Answers/Answerslv1.swift; sourceTree = SOURCE_ROOT; };
 		D4F4247D29DB4CED00840B6C /* DefeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefeatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,8 +185,6 @@
 		81545FFF29E9E33F003F445A /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				D46467FC29E7509B001C7C42 /* TutorialView.swift */,
-				D46467FE29E750B9001C7C42 /* TutorialSecondView.swift */,
 				81545FF629E9D301003F445A /* AboutView.swift */,
 				81545FF829E9D343003F445A /* HowToPlayView.swift */,
 			);
@@ -273,14 +267,12 @@
 			files = (
 				813D2CB729E733FA00941472 /* FormsInfoView.swift in Sources */,
 				810B451729D4AB9800A90B12 /* FormsView.swift in Sources */,
-				D46467FD29E7509B001C7C42 /* TutorialView.swift in Sources */,
 				81545FF929E9D343003F445A /* HowToPlayView.swift in Sources */,
 				8177ABAE29D61B530071059D /* InfoView.swift in Sources */,
 				81545FF729E9D301003F445A /* AboutView.swift in Sources */,
 				6B8FA32829DB4CB50072D701 /* VictoryView.swift in Sources */,
 				D4DB4A2429CE41EB00194C3F /* Answerslv1.swift in Sources */,
 				D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */,
-				D46467FF29E750B9001C7C42 /* TutorialSecondView.swift in Sources */,
 				81545FFB29E9D3AA003F445A /* InfoViewModel.swift in Sources */,
 				6B35D96E29D215AD00C59E34 /* GeometryForm.swift in Sources */,
 				813D2CB529E7235500941472 /* Answerslv3.swift in Sources */,
