@@ -3,7 +3,7 @@ import Foundation
 import SwiftUI
 
 
-struct FormsViewHard: View {
+struct FormsView: View {
     @State var backgroundArray = ["1","2","3"]
     @StateObject private var images = randomImage()
     @State var showMyView = false
@@ -11,7 +11,7 @@ struct FormsViewHard: View {
     @State var decrement = 3
     @State var changeBackground = 0
     @State private var showImage = false
-    @State var lv3 = 9
+    @State var lv3 = 4
     @State var imagemForma: String = ""
     var body: some View {
         
@@ -55,7 +55,7 @@ struct FormsViewHard: View {
 //                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.8))
             }
             if showMyView {
-                Respostaslv3(randomImages: images, arraycerto: images)
+                Answerslv1(randomImages: images, arraycerto: images)
             }
         }.onAppear{
             decrementFunc()

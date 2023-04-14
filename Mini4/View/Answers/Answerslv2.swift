@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct Respostaslv3: View {
+struct Answerslv2: View {
     var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
     @State var clickedButtonsName: [String] = []
@@ -22,7 +22,7 @@ struct Respostaslv3: View {
             ZStack {
                 NavigationLink {
                     
-                    ContentView()
+                    HomeView()
                 } label: {
                     VStack {
                         Image("home preenchido").resizable().scaledToFit().frame(width: 40, height: 40)
@@ -51,7 +51,7 @@ struct Respostaslv3: View {
                         
                         Grid {
                             GridRow {
-                                ForEach(0..<3) { index in
+                                ForEach(0..<2) { index in
                                     ZStack {
                                         
                                         Rectangle()
@@ -70,14 +70,14 @@ struct Respostaslv3: View {
                                 }
                             }
                             GridRow {
-                                ForEach(0..<3) { index in
+                                ForEach(0..<2) { index in
                                     ZStack {
                                         Rectangle()
                                             .frame(width: 90, height: 70)
                                             .foregroundColor(Color("roundedretangle")).opacity(0.3)
                                             .padding(.horizontal, 10).padding(.vertical, 10)
-                                        if ( index+3 < clickedButtonsIDs.count){
-                                            Image("\(clickedButtonsIDs[index + 3 ])").resizable()
+                                        if ( index+2 < clickedButtonsIDs.count){
+                                            Image("\(clickedButtonsIDs[index + 2 ])").resizable()
                                                 .scaledToFit()
                                                 .frame(width: 30,height: 30)
                                                 .foregroundColor(.white)
@@ -87,14 +87,14 @@ struct Respostaslv3: View {
                                 }
                             }
                             GridRow {
-                                ForEach(0..<3) { index in
+                                ForEach(0..<2) { index in
                                     ZStack {
                                         Rectangle()
                                             .frame(width: 90, height: 70)
                                             .foregroundColor(Color("roundedretangle")).opacity(0.3)
                                             .padding(.horizontal, 10).padding(.vertical, 10)
-                                        if ( index+6 < clickedButtonsIDs.count){
-                                            Image("\(clickedButtonsIDs[index + 6 ])").resizable()
+                                        if ( index+4 < clickedButtonsIDs.count){
+                                            Image("\(clickedButtonsIDs[index + 4 ])").resizable()
                                                 .scaledToFit()
                                                 .frame(width: 30,height: 30)
                                                 .foregroundColor(.white)
@@ -102,7 +102,7 @@ struct Respostaslv3: View {
                                         }
                                     }
                                 }
-                            }
+                            }.disabled(true)
                         }
                     }
                     
@@ -116,11 +116,11 @@ struct Respostaslv3: View {
         
     }
 }
-struct Respostaslv3_Previews: PreviewProvider {
+struct Respostaslv2_Previews: PreviewProvider {
     
     static var previews: some View {
         let images = randomImage()
-        Respostaslv3(randomImages: images, arraycerto: images)
+        Answerslv2(randomImages: images, arraycerto: images)
         
     }
 }

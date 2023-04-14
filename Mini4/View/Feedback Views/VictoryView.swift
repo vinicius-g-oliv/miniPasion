@@ -26,7 +26,7 @@ struct VictoryView: View {
                     .position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.65))
 
                 HStack {
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: HomeView()) {
                         Image("sair")
                             .resizable()
                             .scaledToFit()

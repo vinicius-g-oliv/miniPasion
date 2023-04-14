@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct Respostaslv1: View {
+struct Answerslv1: View {
     var randomImages: randomImage
     @State var clickedButtonsIDs: [String] = []
     @State var clickedButtonsName: [String] = []
@@ -22,7 +22,7 @@ struct Respostaslv1: View {
             ZStack {
                 NavigationLink {
                     
-                    ContentView()
+                    HomeView()
                 } label: {
                     VStack {
                         Image("home preenchido").resizable().scaledToFit().frame(width: 40, height: 40)
@@ -103,7 +103,7 @@ struct Respostaslv1_Previews: PreviewProvider {
     
     static var previews: some View {
         let images = randomImage()
-        Respostaslv1(randomImages: images, arraycerto: images)
+        Answerslv1(randomImages: images, arraycerto: images)
         
     }
 }

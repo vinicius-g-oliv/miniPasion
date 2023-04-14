@@ -27,7 +27,7 @@ struct DefeatView: View {
                     }
                 }
                     HStack {
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: HomeView()) {
                                 Image("sair")
                                     .resizable()
                                     .scaledToFit()

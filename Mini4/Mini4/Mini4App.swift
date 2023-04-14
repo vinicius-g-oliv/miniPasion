@@ -12,7 +12,7 @@ struct Mini4App: App {
     var body: some Scene {
     
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

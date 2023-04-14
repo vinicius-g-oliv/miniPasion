@@ -55,7 +55,7 @@ struct FormsViewMedium: View {
 //                }.position(CGPoint(x: geo.size.width * 0.5, y: geo.size.height * 0.8))
             }
             if showMyView {
-                Respostaslv2(randomImages: images, arraycerto: images)
+                Answerslv2(randomImages: images, arraycerto: images)
             }
         }.onAppear{
             decrementFunc()
