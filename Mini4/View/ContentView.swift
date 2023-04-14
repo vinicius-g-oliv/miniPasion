@@ -14,6 +14,7 @@ struct ContentView: View {
             ZStack {
                
                 Color("background").ignoresSafeArea()
+                Image("backgroundImage").resizable()
                
                 Image("backgroundImage").resizable().ignoresSafeArea()
                 VStack {
