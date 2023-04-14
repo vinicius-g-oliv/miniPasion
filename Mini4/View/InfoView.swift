@@ -11,7 +11,10 @@ struct InfoView: View {
     
     var title: String
     @Binding var show: Bool
-    @State private var showView : Bool =  false
+    @State private var showAboutView : Bool =  false
+    @State private var showGeometricFormsView : Bool =  false
+    @State private var showHowToPlayView : Bool =  false
+
     
     var body: some View {
         
@@ -41,41 +44,50 @@ struct InfoView: View {
                             HStack {
                                 Button(action: {
                                     withAnimation(.linear(duration: 0.3)) {
-                                        print("A")
+                                        showHowToPlayView.toggle()
                                     }
                                 }, label: {
-                                    Image("questions").resizable().frame(width: 30,height: 30)
-                                    Text("asa")
+                                    Image("questionSymbol").resizable().frame(width: 30,height: 30)
+                                    Text("Como Jogar").foregroundColor(.white)
+                                        .underline()
+                                        .font(Font.custom("Jost-Regular", size: 20))
                                 })
                                 
-                            }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.3))
+                            }.position(CGPoint(x: geo.size.width * 0.28, y:  geo.size.height * 0.3))
                             HStack {
                                 Button(action: {
                                     withAnimation(.linear(duration: 0.3)) {
-                                        showView.toggle()
+                                        showGeometricFormsView.toggle()
                                     }
                                 }, label: {
                                     
-                                    Image("questions").resizable().frame(width: 30,height: 30)
-                                    Text("asa").foregroundColor(.white)
+                                    Image("formsSymbol").resizable().frame(width: 30,height: 30)
+                                    Text("Formas Geométricas").foregroundColor(.white)
+                                     //   .frame(width: 200)
+                                        .underline()
+                                        .font(Font.custom("Jost-Regular", size: 20))
+                                        
+                                       
                                 })
-                            }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.5))
+                            }.position(CGPoint(x: geo.size.width * 0.4, y:  geo.size.height * 0.5))
                             HStack {
                                 Button(action: {
                                     withAnimation(.linear(duration: 0.3)) {
-                                        print("C")
-                                    }
+                                        showAboutView.toggle()                                    }
                                 }, label: {
-                                    Image("questions").resizable().frame(width: 30,height: 30)
-                                    Text("asa")
+                                    Image("infoSymbol").resizable().frame(width: 30,height: 30)
+                                    Text("Sobre").foregroundColor(.white)
+                                        .underline()
+                                        .font(Font.custom("Jost-Regular", size: 20))
                                 })
-                            }.position(CGPoint(x: geo.size.width * 0.3, y:  geo.size.height * 0.7))
+                            }.position(CGPoint(x: geo.size.width * 0.19, y:  geo.size.height * 0.7))
                         }
                     }.frame(width: 300, height: 300)
                 }.frame(width: 300, height: 300)
             }
-            introview(show: $showView)
+            AboutView(show: $showAboutView)
+            IntroView(show: $showGeometricFormsView)
+            HowToPlayView(show: $showHowToPlayView)
         }.navigationBarBackButtonHidden().navigationViewStyle(StackNavigationViewStyle())
     }
 }
-

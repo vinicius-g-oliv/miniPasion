@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct introview: View {
+struct IntroView: View {
     @Binding var show: Bool
     @State var count = 0
     @State var showFormsView : Bool = false
@@ -17,21 +17,32 @@ struct introview: View {
                     Image("cardInfo").resizable()
                         .frame(width: 300, height: 300)
                     VStack {
-                        Image("formasInfos").resizable()
+                        Image("formsSymbol").resizable()
                             .frame(width: 99.6, height: 99.5)
                         
-                        
-                        Text("Como Jogar")
-                            .font(Font.system(size: 17, weight: .semibold))
+                        Text("Formas Geométricas")
+                            .font(Font.custom("Jost-Medium", size: 17))
                             .foregroundColor(Color.white)
                             .frame(height: 30)
                         
                         Text("Essas são as formas geométricas que usamos para o jogo!").multilineTextAlignment(.center)
-                            .font(Font.system(size: 15, weight: .semibold))
+                            .font(Font.custom("Jost-Regular", size: 16))
                             .foregroundColor(Color.white)
-                            .frame(width: 250, height: 40)
+                            .frame(width: 210, height: 100)
                         
                     }
+                    
+                    VStack {
+                        Button(action: {
+                            // Dismiss the PopUp
+                            withAnimation(.linear(duration: 0.3)) {
+                                show = false // usar outra lógica aqui
+                            }
+                        }, label: {
+                            Image("voltar4x").resizable().frame(width: 30, height: 30)
+                        }).position(CGPoint(x: geo.size.width * 0.2, y: geo.size.height * 0.35))
+                    }
+                            
                     Button(action: {
                         count += 1
                         if count > 1 {

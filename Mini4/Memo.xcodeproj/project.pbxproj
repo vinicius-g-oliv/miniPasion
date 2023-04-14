@@ -24,9 +24,12 @@
 		813D2CB329E7233500941472 /* FormsViewHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB229E7233500941472 /* FormsViewHard.swift */; };
 		813D2CB529E7235500941472 /* Respostaslv3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB429E7235500941472 /* Respostaslv3.swift */; };
 		813D2CB729E733FA00941472 /* FormsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB629E733FA00941472 /* FormsInfoView.swift */; };
-		813D2CB929E734E400941472 /* introview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB829E734E400941472 /* introview.swift */; };
+		813D2CB929E734E400941472 /* IntroViewntroview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2CB829E734E400941472 /* IntroViewntroview.swift */; };
 		814ED54429DE2EA800578723 /* FormsViewMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED54329DE2EA800578723 /* FormsViewMedium.swift */; };
 		814ED54629DE2EC000578723 /* Respostaslv2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814ED54529DE2EC000578723 /* Respostaslv2.swift */; };
+		81545FF729E9D301003F445A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81545FF629E9D301003F445A /* AboutView.swift */; };
+		81545FF929E9D343003F445A /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81545FF829E9D343003F445A /* HowToPlayView.swift */; };
+		81545FFB29E9D3AA003F445A /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81545FFA29E9D3AA003F445A /* InfoViewModel.swift */; };
 		8177ABAE29D61B530071059D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177ABAD29D61B530071059D /* InfoView.swift */; };
 		D46467FD29E7509B001C7C42 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46467FC29E7509B001C7C42 /* TutorialView.swift */; };
 		D46467FF29E750B9001C7C42 /* TutorialSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46467FE29E750B9001C7C42 /* TutorialSecondView.swift */; };
@@ -53,9 +56,12 @@
 		813D2CB229E7233500941472 /* FormsViewHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewHard.swift; sourceTree = "<group>"; };
 		813D2CB429E7235500941472 /* Respostaslv3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respostaslv3.swift; sourceTree = "<group>"; };
 		813D2CB629E733FA00941472 /* FormsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsInfoView.swift; sourceTree = "<group>"; };
-		813D2CB829E734E400941472 /* introview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introview.swift; sourceTree = "<group>"; };
+		813D2CB829E734E400941472 /* IntroViewntroview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewntroview.swift; sourceTree = "<group>"; };
 		814ED54329DE2EA800578723 /* FormsViewMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewMedium.swift; sourceTree = "<group>"; };
 		814ED54529DE2EC000578723 /* Respostaslv2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respostaslv2.swift; sourceTree = "<group>"; };
+		81545FF629E9D301003F445A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		81545FF829E9D343003F445A /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
+		81545FFA29E9D3AA003F445A /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		8177ABAD29D61B530071059D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		81FEB69E29E5D70F0043EE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D46467FC29E7509B001C7C42 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
@@ -127,11 +133,13 @@
 				813D2CB229E7233500941472 /* FormsViewHard.swift */,
 				8177ABAD29D61B530071059D /* InfoView.swift */,
 				813D2CB629E733FA00941472 /* FormsInfoView.swift */,
-				813D2CB829E734E400941472 /* introview.swift */,
+				813D2CB829E734E400941472 /* IntroViewntroview.swift */,
 				6B8FA32729DB4CB50072D701 /* VictoryView.swift */,
 				D4F4247D29DB4CED00840B6C /* DefeatView.swift */,
 				D46467FC29E7509B001C7C42 /* TutorialView.swift */,
 				D46467FE29E750B9001C7C42 /* TutorialSecondView.swift */,
+				81545FF629E9D301003F445A /* AboutView.swift */,
+				81545FF829E9D343003F445A /* HowToPlayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				6B35D96D29D215AD00C59E34 /* GeometryForm.swift */,
 				810B451829D4AC3F00A90B12 /* ModelView.swift */,
+				81545FFA29E9D3AA003F445A /* InfoViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,17 +242,20 @@
 				813D2CB729E733FA00941472 /* FormsInfoView.swift in Sources */,
 				810B451729D4AB9800A90B12 /* FormsView.swift in Sources */,
 				D46467FD29E7509B001C7C42 /* TutorialView.swift in Sources */,
+				81545FF929E9D343003F445A /* HowToPlayView.swift in Sources */,
 				8177ABAE29D61B530071059D /* InfoView.swift in Sources */,
+				81545FF729E9D301003F445A /* AboutView.swift in Sources */,
 				6B8FA32829DB4CB50072D701 /* VictoryView.swift in Sources */,
 				D4DB4A2429CE41EB00194C3F /* Respostaslv1.swift in Sources */,
 				D4F4247E29DB4CED00840B6C /* DefeatView.swift in Sources */,
 				D46467FF29E750B9001C7C42 /* TutorialSecondView.swift in Sources */,
+				81545FFB29E9D3AA003F445A /* InfoViewModel.swift in Sources */,
 				6B35D96E29D215AD00C59E34 /* GeometryForm.swift in Sources */,
 				813D2CB529E7235500941472 /* Respostaslv3.swift in Sources */,
 				810B451929D4AC3F00A90B12 /* ModelView.swift in Sources */,
 				6B35D93529CB95EA00C59E34 /* ContentView.swift in Sources */,
 				6B35D97229D21B8D00C59E34 /* BottomButtons.swift in Sources */,
-				813D2CB929E734E400941472 /* introview.swift in Sources */,
+				813D2CB929E734E400941472 /* IntroViewntroview.swift in Sources */,
 				813D2CB329E7233500941472 /* FormsViewHard.swift in Sources */,
 				6BE8819F29D35F5500AC287C /* RectangleBottom.swift in Sources */,
 				814ED54629DE2EC000578723 /* Respostaslv2.swift in Sources */,
