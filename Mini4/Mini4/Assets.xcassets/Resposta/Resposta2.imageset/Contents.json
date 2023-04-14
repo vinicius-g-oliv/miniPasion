@@ -1,7 +1,11 @@
 {
   "images" : [
     {
+<<<<<<<< HEAD:Mini4/Mini4/Assets.xcassets/Resposta/Resposta2.imageset/Contents.json
       "filename" : "Resposta2.png",
+========
+      "filename" : "InfoSymbol.png",
+>>>>>>>> origin/Correções-Finais:Mini4/Mini4/Assets.xcassets/InfoView Symbols/InfoSymbol.imageset/Contents.json
       "idiom" : "universal",
       "scale" : "1x"
     },
