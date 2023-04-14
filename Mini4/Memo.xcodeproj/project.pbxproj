@@ -35,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B35D92F29CB95EA00C59E34 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B35D92F29CB95EA00C59E34 /* Mini4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B35D93229CB95EA00C59E34 /* Mini4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini4App.swift; sourceTree = "<group>"; };
 		6B35D93429CB95EA00C59E34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B35D93629CB95EA00C59E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		6B35D93029CB95EA00C59E34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B35D92F29CB95EA00C59E34 /* Memo.app */,
+				6B35D92F29CB95EA00C59E34 /* Mini4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B35D92E29CB95EA00C59E34 /* Memo */ = {
+		6B35D92E29CB95EA00C59E34 /* Mini4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B35D95329CB95EA00C59E34 /* Build configuration list for PBXNativeTarget "Memo" */;
+			buildConfigurationList = 6B35D95329CB95EA00C59E34 /* Build configuration list for PBXNativeTarget "Mini4" */;
 			buildPhases = (
 				6B35D92B29CB95EA00C59E34 /* Sources */,
 				6B35D92C29CB95EA00C59E34 /* Frameworks */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = Memo;
+			name = Mini4;
 			productName = Mini4;
-			productReference = 6B35D92F29CB95EA00C59E34 /* Memo.app */;
+			productReference = 6B35D92F29CB95EA00C59E34 /* Mini4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B35D92E29CB95EA00C59E34 /* Memo */,
+				6B35D92E29CB95EA00C59E34 /* Mini4 */,
 			);
 		};
 /* End PBXProject section */
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B35D95329CB95EA00C59E34 /* Build configuration list for PBXNativeTarget "Memo" */ = {
+		6B35D95329CB95EA00C59E34 /* Build configuration list for PBXNativeTarget "Mini4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B35D95429CB95EA00C59E34 /* Debug */,
