@@ -18,13 +18,14 @@ struct Random: Hashable {
 
 extension Random {
     static let forms = [
+        
         Random(image: "circulo amarelo", name: "Círculo"),
         Random(image: "estrela azul", name: "Estrela"),
         Random(image: "hexagono laranja", name: "Hexâgono"),
         Random(image: "oval pink", name: "Oval"),
         Random(image: "pentagono rosa claro", name: "Pentâgono"),
         Random(image: "quadrado verde", name: "Quadrado"),
-        Random(image: "retangulo roxo", name: "Retangulo"),
+        Random(image: "retangulo roxo", name: "Retângulo"),
         Random(image: "triangulo rosa", name: "Triângulo"),
     ]
 }

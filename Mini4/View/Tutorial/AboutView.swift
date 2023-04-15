@@ -38,7 +38,18 @@ struct AboutView: View {
                                 .frame(width: 280)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
-           
+                            
+                            if arrayViews[count].id == 2 {
+                                //Link FAQ
+                                HStack {
+                                    Image("AppIcon")
+                                    Link( "© Memo", destination: URL(string: "https://forms.gle/hGZ7p8TTA4UHxd4g7")!).font(Font.custom("Jost-bold", size: 20))
+                                        .font(.system(size: 35))
+                                        .foregroundColor(Color.white)
+                                }
+                            }
+                            
+                            
                         }
                         
                         VStack {
